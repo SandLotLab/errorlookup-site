@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About ErrorLookup | HTTP Status Code Reference for Developers</title>
+  <meta name="description" content="Learn what ErrorLookup is, who it helps, and how our HTTP status code guides, comparisons, and troubleshooting pages support production debugging.">
+  <link rel="canonical" href="https://errorlookup.com/about/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About ErrorLookup | HTTP Status Code Reference for Developers">
+  <meta property="og:description" content="ErrorLookup helps developers quickly understand HTTP status codes, compare similar errors, and troubleshoot production incidents with practical guidance.">
+  <meta property="og:url" content="https://errorlookup.com/about/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About ErrorLookup | HTTP Status Code Reference for Developers">
+  <meta name="twitter:description" content="Why ErrorLookup exists and how it helps developers debug redirects, client errors, server failures, and API response issues.">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+</head>
+<body>
+  <div data-include="/partials/header.html"></div>
+  <main class="container">
+    <section class="section">
+      <h1>About ErrorLookup</h1>
+      <p>ErrorLookup is a developer-focused reference site for understanding and fixing HTTP status code issues. We focus on clear, practical explanations of what each code means, why it appears, and what to do next when an API call, web request, or production service starts failing.</p>
+      <p>Our goal is simple: reduce debugging time by turning ambiguous error responses into concrete next steps. Whether you are tracking a redirect chain, handling client input failures, or investigating unstable upstream dependencies, ErrorLookup is built for fast lookup and real troubleshooting.</p>
+    </section>
+
+    <section class="section">
+      <h2>Who ErrorLookup Is For</h2>
+      <p>ErrorLookup is for developers, SREs, QA engineers, support teams, and technical leads who need dependable HTTP response guidance during implementation and incident response. It is especially useful when your logs are noisy, your monitoring alerts are broad, and you need a fast answer before a minor issue becomes an outage.</p>
+      <p>If your daily workflow includes API integrations, reverse proxies, CDNs, authentication layers, or distributed services, you will likely encounter confusing status code behavior. We publish explanations in plain language so teams can align quickly and ship fixes with confidence.</p>
+    </section>
+
+    <section class="section">
+      <h2>Why HTTP Status Code Clarity Matters</h2>
+      <p>Status codes are one of the strongest signals in web debugging, but they are often misunderstood in practice. Misinterpreting a <span class="code">302</span> as a permanent move, treating every <span class="code">500</span> as an application bug, or confusing <span class="code">401</span> with <span class="code">403</span> can lead to incorrect fixes and longer incidents.</p>
+      <p>ErrorLookup emphasizes precision: what triggered a response, where to inspect next, and how to avoid repeat failures. Clear code interpretation improves triage, reduces back-and-forth between teams, and helps protect user-facing reliability.</p>
+    </section>
+
+    <section class="section">
+      <h2>How ErrorLookup Helps in Production Troubleshooting</h2>
+      <p>We organize content so developers can move from symptom to action fast:</p>
+      <ul>
+        <li><a href="/status-codes/">Status code pages</a> for direct lookup by numeric response code.</li>
+        <li>Category pages for common classes, including <a href="/common/client-errors/">client errors</a>, <a href="/common/server-errors/">server errors</a>, and <a href="/common/redirect-codes/">redirect codes</a>.</li>
+        <li>Comparison pages such as <a href="/compare/301-vs-302/">301 vs 302</a> to distinguish similar responses that require different handling.</li>
+        <li>Troubleshooting guides for frequent failures, including <a href="/guides/404-not-found/">404 Not Found</a> and <a href="/guides/500-internal-server-error/">500 Internal Server Error</a>.</li>
+      </ul>
+      <p>Each content type serves a specific debugging moment, from quick response validation to deeper root-cause analysis.</p>
+    </section>
+
+    <section class="section">
+      <h2>Editorial Focus</h2>
+      <p>ErrorLookup prioritizes practical debugging advice over theory-heavy documentation. We explain likely causes, useful checks, and next actions using language teams can apply immediately in development, staging, and production environments. The site is designed for high signal, fast scanning, and repeat use during incident pressure.</p>
+    </section>
+  </main>
+  <div data-include="/partials/footer.html"></div>
+</body>
+</html>

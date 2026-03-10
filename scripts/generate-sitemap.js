@@ -14,7 +14,11 @@ const staticPaths = [
   '/common/server-errors/',
   '/compare/301-vs-302/',
   '/compare/401-vs-403/',
-  '/compare/403-vs-404/'
+  '/compare/403-vs-404/',
+  '/about/',
+  '/contact/',
+  '/privacy/',
+  '/terms/'
 ];
 
 function loadCodes() {
