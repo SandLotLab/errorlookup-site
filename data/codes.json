@@ -1,2865 +1,3113 @@
-[
-  {
-    "code": 100,
-    "title": "Continue",
-    "reference": "[RFC9110, Section 15.2.1]",
-    "slug": "100-continue",
-    "pathGuide": "/guides/100-continue/",
-    "pathStatus": "/status/100/",
-    "phrase": "Continue",
-    "category": "Informational",
-    "class": 1,
-    "summary": "HTTP 100 Continue is a informational status code used in HTTP responses.",
-    "meaning": "Continue indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 100.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 100.",
-      "Apply handling based on informational semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 100 Continue\nContent-Type: text/plain"
-    },
-    "related": [
-      101
-    ],
-    "aliases": [
-      "continue"
-    ],
-    "keywords": [
-      "100",
-      "continue",
-      "informational"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.2.1]",
-    "iana_name": "Continue"
-  },
-  {
-    "code": 101,
-    "title": "Switching Protocols",
-    "reference": "[RFC9110, Section 15.2.2]",
-    "slug": "101-switching-protocols",
-    "pathGuide": "/guides/101-switching-protocols/",
-    "pathStatus": "/status/101/",
-    "phrase": "Switching Protocols",
-    "category": "Informational",
-    "class": 1,
-    "summary": "HTTP 101 Switching Protocols is a informational status code used in HTTP responses.",
-    "meaning": "Switching Protocols indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 101.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 101.",
-      "Apply handling based on informational semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 101 Switching Protocols\nContent-Type: text/plain"
-    },
-    "related": [
-      100,
-      102
-    ],
-    "aliases": [
-      "switching protocols"
-    ],
-    "keywords": [
-      "101",
-      "switching protocols",
-      "informational"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.2.2]",
-    "iana_name": "Switching Protocols"
-  },
-  {
-    "code": 102,
-    "title": "Processing",
-    "reference": "[RFC2518]",
-    "slug": "102-processing",
-    "pathGuide": "/guides/102-processing/",
-    "pathStatus": "/status/102/",
-    "phrase": "Processing",
-    "category": "Informational",
-    "class": 1,
-    "summary": "HTTP 102 Processing is a informational status code used in HTTP responses.",
-    "meaning": "Processing indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 102.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 102.",
-      "Apply handling based on informational semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 102 Processing\nContent-Type: text/plain"
-    },
-    "related": [
-      101,
-      103
-    ],
-    "aliases": [
-      "processing"
-    ],
-    "keywords": [
-      "102",
-      "processing",
-      "informational"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC2518]",
-    "iana_name": "Processing"
-  },
-  {
-    "code": 103,
-    "title": "Early Hints",
-    "reference": "[RFC8297]",
-    "slug": "103-early-hints",
-    "pathGuide": "/guides/103-early-hints/",
-    "pathStatus": "/status/103/",
-    "phrase": "Early Hints",
-    "category": "Informational",
-    "class": 1,
-    "summary": "HTTP 103 Early Hints is a informational status code used in HTTP responses.",
-    "meaning": "Early Hints indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 103.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 103.",
-      "Apply handling based on informational semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 103 Early Hints\nContent-Type: text/plain"
-    },
-    "related": [
-      102,
-      104
-    ],
-    "aliases": [
-      "early hints"
-    ],
-    "keywords": [
-      "103",
-      "early hints",
-      "informational"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC8297]",
-    "iana_name": "Early Hints"
-  },
-  {
-    "code": 104,
-    "title": "Upload Resumption Supported (TEMPORARY - registered 2024-11-13, extension registered 2025-09-15, expires 2026-11-13)",
-    "reference": "[draft-ietf-httpbis-resumable-upload-05]",
-    "slug": "104-upload-resumption-supported",
-    "pathGuide": "/guides/104-upload-resumption-supported/",
-    "pathStatus": "/status/104/",
-    "phrase": "Upload Resumption Supported",
-    "category": "Informational",
-    "class": 1,
-    "summary": "HTTP 104 Upload Resumption Supported is a informational status code used in HTTP responses.",
-    "meaning": "Upload Resumption Supported indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 104.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 104.",
-      "Apply handling based on informational semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 104 Upload Resumption Supported\nContent-Type: text/plain"
-    },
-    "related": [
-      103
-    ],
-    "aliases": [
-      "upload resumption supported"
-    ],
-    "keywords": [
-      "104",
-      "upload resumption supported",
-      "informational"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[draft-ietf-httpbis-resumable-upload-05]",
-    "iana_name": "Upload Resumption Supported"
-  },
-  {
-    "code": 200,
-    "title": "OK",
-    "reference": "[RFC9110, Section 15.3.1]",
-    "slug": "200-ok",
-    "pathGuide": "/guides/200-ok/",
-    "pathStatus": "/status/200/",
-    "phrase": "OK",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 200 OK is a success status code used in HTTP responses.",
-    "meaning": "OK indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 200.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 200.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 200 OK\nContent-Type: text/plain"
-    },
-    "related": [
-      201
-    ],
-    "aliases": [
-      "ok"
-    ],
-    "keywords": [
-      "200",
-      "ok",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.1]",
-    "iana_name": "OK"
-  },
-  {
-    "code": 201,
-    "title": "Created",
-    "reference": "[RFC9110, Section 15.3.2]",
-    "slug": "201-created",
-    "pathGuide": "/guides/201-created/",
-    "pathStatus": "/status/201/",
-    "phrase": "Created",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 201 Created is a success status code used in HTTP responses.",
-    "meaning": "Created indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 201.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 201.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 201 Created\nContent-Type: text/plain"
-    },
-    "related": [
-      200,
-      202
-    ],
-    "aliases": [
-      "created"
-    ],
-    "keywords": [
-      "201",
-      "created",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.2]",
-    "iana_name": "Created"
-  },
-  {
-    "code": 202,
-    "title": "Accepted",
-    "reference": "[RFC9110, Section 15.3.3]",
-    "slug": "202-accepted",
-    "pathGuide": "/guides/202-accepted/",
-    "pathStatus": "/status/202/",
-    "phrase": "Accepted",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 202 Accepted is a success status code used in HTTP responses.",
-    "meaning": "Accepted indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 202.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 202.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 202 Accepted\nContent-Type: text/plain"
-    },
-    "related": [
-      201,
-      203
-    ],
-    "aliases": [
-      "accepted"
-    ],
-    "keywords": [
-      "202",
-      "accepted",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.3]",
-    "iana_name": "Accepted"
-  },
-  {
-    "code": 203,
-    "title": "Non-Authoritative Information",
-    "reference": "[RFC9110, Section 15.3.4]",
-    "slug": "203-non-authoritative-information",
-    "pathGuide": "/guides/203-non-authoritative-information/",
-    "pathStatus": "/status/203/",
-    "phrase": "Non-Authoritative Information",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 203 Non-Authoritative Information is a success status code used in HTTP responses.",
-    "meaning": "Non-Authoritative Information indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 203.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 203.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 203 Non-Authoritative Information\nContent-Type: text/plain"
-    },
-    "related": [
-      202,
-      204
-    ],
-    "aliases": [
-      "non-authoritative information"
-    ],
-    "keywords": [
-      "203",
-      "non-authoritative information",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.4]",
-    "iana_name": "Non-Authoritative Information"
-  },
-  {
-    "code": 204,
-    "title": "No Content",
-    "reference": "[RFC9110, Section 15.3.5]",
-    "slug": "204-no-content",
-    "pathGuide": "/guides/204-no-content/",
-    "pathStatus": "/status/204/",
-    "phrase": "No Content",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 204 No Content is a success status code used in HTTP responses.",
-    "meaning": "No Content indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 204.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 204.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 204 No Content\nContent-Type: text/plain"
-    },
-    "related": [
-      203,
-      205
-    ],
-    "aliases": [
-      "no content"
-    ],
-    "keywords": [
-      "204",
-      "no content",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.5]",
-    "iana_name": "No Content"
-  },
-  {
-    "code": 205,
-    "title": "Reset Content",
-    "reference": "[RFC9110, Section 15.3.6]",
-    "slug": "205-reset-content",
-    "pathGuide": "/guides/205-reset-content/",
-    "pathStatus": "/status/205/",
-    "phrase": "Reset Content",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 205 Reset Content is a success status code used in HTTP responses.",
-    "meaning": "Reset Content indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 205.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 205.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 205 Reset Content\nContent-Type: text/plain"
-    },
-    "related": [
-      204,
-      206
-    ],
-    "aliases": [
-      "reset content"
-    ],
-    "keywords": [
-      "205",
-      "reset content",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.6]",
-    "iana_name": "Reset Content"
-  },
-  {
-    "code": 206,
-    "title": "Partial Content",
-    "reference": "[RFC9110, Section 15.3.7]",
-    "slug": "206-partial-content",
-    "pathGuide": "/guides/206-partial-content/",
-    "pathStatus": "/status/206/",
-    "phrase": "Partial Content",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 206 Partial Content is a success status code used in HTTP responses.",
-    "meaning": "Partial Content indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 206.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 206.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 206 Partial Content\nContent-Type: text/plain"
-    },
-    "related": [
-      205,
-      207
-    ],
-    "aliases": [
-      "partial content"
-    ],
-    "keywords": [
-      "206",
-      "partial content",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.3.7]",
-    "iana_name": "Partial Content"
-  },
-  {
-    "code": 207,
-    "title": "Multi-Status",
-    "reference": "[RFC4918]",
-    "slug": "207-multi-status",
-    "pathGuide": "/guides/207-multi-status/",
-    "pathStatus": "/status/207/",
-    "phrase": "Multi-Status",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 207 Multi-Status is a success status code used in HTTP responses.",
-    "meaning": "Multi-Status indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 207.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 207.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 207 Multi-Status\nContent-Type: text/plain"
-    },
-    "related": [
-      206,
-      208
-    ],
-    "aliases": [
-      "multi-status"
-    ],
-    "keywords": [
-      "207",
-      "multi-status",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC4918]",
-    "iana_name": "Multi-Status"
-  },
-  {
-    "code": 208,
-    "title": "Already Reported",
-    "reference": "[RFC5842]",
-    "slug": "208-already-reported",
-    "pathGuide": "/guides/208-already-reported/",
-    "pathStatus": "/status/208/",
-    "phrase": "Already Reported",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 208 Already Reported is a success status code used in HTTP responses.",
-    "meaning": "Already Reported indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 208.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 208.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 208 Already Reported\nContent-Type: text/plain"
-    },
-    "related": [
-      207
-    ],
-    "aliases": [
-      "already reported"
-    ],
-    "keywords": [
-      "208",
-      "already reported",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC5842]",
-    "iana_name": "Already Reported"
-  },
-  {
-    "code": 226,
-    "title": "IM Used",
-    "reference": "[RFC3229]",
-    "slug": "226-im-used",
-    "pathGuide": "/guides/226-im-used/",
-    "pathStatus": "/status/226/",
-    "phrase": "IM Used",
-    "category": "Success",
-    "class": 2,
-    "summary": "HTTP 226 IM Used is a success status code used in HTTP responses.",
-    "meaning": "IM Used indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 226.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 226.",
-      "Apply handling based on success semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 226 IM Used\nContent-Type: text/plain"
-    },
-    "related": [],
-    "aliases": [
-      "im used"
-    ],
-    "keywords": [
-      "226",
-      "im used",
-      "success"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC3229]",
-    "iana_name": "IM Used"
-  },
-  {
-    "code": 300,
-    "title": "Multiple Choices",
-    "reference": "[RFC9110, Section 15.4.1]",
-    "slug": "300-multiple-choices",
-    "pathGuide": "/guides/300-multiple-choices/",
-    "pathStatus": "/status/300/",
-    "phrase": "Multiple Choices",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 300 Multiple Choices is a redirection status code used in HTTP responses.",
-    "meaning": "Multiple Choices indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 300.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 300.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 300 Multiple Choices\nContent-Type: text/plain"
-    },
-    "related": [
-      301
-    ],
-    "aliases": [
-      "multiple choices"
-    ],
-    "keywords": [
-      "300",
-      "multiple choices",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.1]",
-    "iana_name": "Multiple Choices"
-  },
-  {
-    "code": 301,
-    "title": "Moved Permanently",
-    "reference": "[RFC9110, Section 15.4.2]",
-    "slug": "301-moved-permanently",
-    "pathGuide": "/guides/301-moved-permanently/",
-    "pathStatus": "/status/301/",
-    "phrase": "Moved Permanently",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 301 Moved Permanently is a redirection status code used in HTTP responses.",
-    "meaning": "Moved Permanently indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 301.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 301.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 301 Moved Permanently\nContent-Type: text/plain"
-    },
-    "related": [
-      300,
-      302
-    ],
-    "aliases": [
-      "moved permanently"
-    ],
-    "keywords": [
-      "301",
-      "moved permanently",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.2]",
-    "iana_name": "Moved Permanently"
-  },
-  {
-    "code": 302,
-    "title": "Found",
-    "reference": "[RFC9110, Section 15.4.3]",
-    "slug": "302-found",
-    "pathGuide": "/guides/302-found/",
-    "pathStatus": "/status/302/",
-    "phrase": "Found",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 302 Found is a redirection status code used in HTTP responses.",
-    "meaning": "Found indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 302.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 302.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 302 Found\nContent-Type: text/plain"
-    },
-    "related": [
-      301,
-      303
-    ],
-    "aliases": [
-      "found"
-    ],
-    "keywords": [
-      "302",
-      "found",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.3]",
-    "iana_name": "Found"
-  },
-  {
-    "code": 303,
-    "title": "See Other",
-    "reference": "[RFC9110, Section 15.4.4]",
-    "slug": "303-see-other",
-    "pathGuide": "/guides/303-see-other/",
-    "pathStatus": "/status/303/",
-    "phrase": "See Other",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 303 See Other is a redirection status code used in HTTP responses.",
-    "meaning": "See Other indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 303.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 303.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 303 See Other\nContent-Type: text/plain"
-    },
-    "related": [
-      302,
-      304
-    ],
-    "aliases": [
-      "see other"
-    ],
-    "keywords": [
-      "303",
-      "see other",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.4]",
-    "iana_name": "See Other"
-  },
-  {
-    "code": 304,
-    "title": "Not Modified",
-    "reference": "[RFC9110, Section 15.4.5]",
-    "slug": "304-not-modified",
-    "pathGuide": "/guides/304-not-modified/",
-    "pathStatus": "/status/304/",
-    "phrase": "Not Modified",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 304 Not Modified is a redirection status code used in HTTP responses.",
-    "meaning": "Not Modified indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 304.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 304.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 304 Not Modified\nContent-Type: text/plain"
-    },
-    "related": [
-      303,
-      305
-    ],
-    "aliases": [
-      "not modified"
-    ],
-    "keywords": [
-      "304",
-      "not modified",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.5]",
-    "iana_name": "Not Modified"
-  },
-  {
-    "code": 305,
-    "title": "Use Proxy",
-    "reference": "[RFC9110, Section 15.4.6]",
-    "slug": "305-use-proxy",
-    "pathGuide": "/guides/305-use-proxy/",
-    "pathStatus": "/status/305/",
-    "phrase": "Use Proxy",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 305 Use Proxy is a redirection status code used in HTTP responses.",
-    "meaning": "Use Proxy indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 305.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 305.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 305 Use Proxy\nContent-Type: text/plain"
-    },
-    "related": [
-      304,
-      306
-    ],
-    "aliases": [
-      "use proxy"
-    ],
-    "keywords": [
-      "305",
-      "use proxy",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.6]",
-    "iana_name": "Use Proxy"
-  },
-  {
-    "code": 306,
-    "title": "(Unused)",
-    "reference": "[RFC9110, Section 15.4.7]",
-    "slug": "306-unknown",
-    "pathGuide": "/guides/306-unknown/",
-    "pathStatus": "/status/306/",
-    "phrase": "",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 306  is a redirection status code used in HTTP responses.",
-    "meaning": " indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 306.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 306.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 306 \nContent-Type: text/plain"
-    },
-    "related": [
-      305,
-      307
-    ],
-    "aliases": [
-      ""
-    ],
-    "keywords": [
-      "306",
-      "",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.7]",
-    "iana_name": ""
-  },
-  {
-    "code": 307,
-    "title": "Temporary Redirect",
-    "reference": "[RFC9110, Section 15.4.8]",
-    "slug": "307-temporary-redirect",
-    "pathGuide": "/guides/307-temporary-redirect/",
-    "pathStatus": "/status/307/",
-    "phrase": "Temporary Redirect",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 307 Temporary Redirect is a redirection status code used in HTTP responses.",
-    "meaning": "Temporary Redirect indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 307.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 307.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 307 Temporary Redirect\nContent-Type: text/plain"
-    },
-    "related": [
-      306,
-      308
-    ],
-    "aliases": [
-      "temporary redirect"
-    ],
-    "keywords": [
-      "307",
-      "temporary redirect",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.8]",
-    "iana_name": "Temporary Redirect"
-  },
-  {
-    "code": 308,
-    "title": "Permanent Redirect",
-    "reference": "[RFC9110, Section 15.4.9]",
-    "slug": "308-permanent-redirect",
-    "pathGuide": "/guides/308-permanent-redirect/",
-    "pathStatus": "/status/308/",
-    "phrase": "Permanent Redirect",
-    "category": "Redirection",
-    "class": 3,
-    "summary": "HTTP 308 Permanent Redirect is a redirection status code used in HTTP responses.",
-    "meaning": "Permanent Redirect indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 308.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 308.",
-      "Apply handling based on redirection semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 308 Permanent Redirect\nContent-Type: text/plain"
-    },
-    "related": [
-      307
-    ],
-    "aliases": [
-      "permanent redirect"
-    ],
-    "keywords": [
-      "308",
-      "permanent redirect",
-      "redirection"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.4.9]",
-    "iana_name": "Permanent Redirect"
-  },
-  {
-    "code": 400,
-    "title": "Bad Request",
-    "reference": "[RFC9110, Section 15.5.1]",
-    "slug": "400-bad-request",
-    "pathGuide": "/guides/400-bad-request/",
-    "pathStatus": "/status/400/",
-    "phrase": "Bad Request",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 400 Bad Request is a client errors status code used in HTTP responses.",
-    "meaning": "Bad Request indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 400.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 400.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 400 Bad Request\nContent-Type: text/plain"
-    },
-    "related": [
-      401
-    ],
-    "aliases": [
-      "bad request"
-    ],
-    "keywords": [
-      "400",
-      "bad request",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.1]",
-    "iana_name": "Bad Request"
-  },
-  {
-    "code": 401,
-    "title": "Unauthorized",
-    "reference": "[RFC9110, Section 15.5.2]",
-    "slug": "401-unauthorized",
-    "pathGuide": "/guides/401-unauthorized/",
-    "pathStatus": "/status/401/",
-    "phrase": "Unauthorized",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 401 Unauthorized is a client errors status code used in HTTP responses.",
-    "meaning": "Unauthorized indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 401.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 401.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 401 Unauthorized\nContent-Type: text/plain"
-    },
-    "related": [
-      400,
-      402
-    ],
-    "aliases": [
-      "unauthorized"
-    ],
-    "keywords": [
-      "401",
-      "unauthorized",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.2]",
-    "iana_name": "Unauthorized"
-  },
-  {
-    "code": 402,
-    "title": "Payment Required",
-    "reference": "[RFC9110, Section 15.5.3]",
-    "slug": "402-payment-required",
-    "pathGuide": "/guides/402-payment-required/",
-    "pathStatus": "/status/402/",
-    "phrase": "Payment Required",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 402 Payment Required is a client errors status code used in HTTP responses.",
-    "meaning": "Payment Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 402.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 402.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 402 Payment Required\nContent-Type: text/plain"
-    },
-    "related": [
-      401,
-      403
-    ],
-    "aliases": [
-      "payment required"
-    ],
-    "keywords": [
-      "402",
-      "payment required",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.3]",
-    "iana_name": "Payment Required"
-  },
-  {
-    "code": 403,
-    "title": "Forbidden",
-    "reference": "[RFC9110, Section 15.5.4]",
-    "slug": "403-forbidden",
-    "pathGuide": "/guides/403-forbidden/",
-    "pathStatus": "/status/403/",
-    "phrase": "Forbidden",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 403 Forbidden is a client errors status code used in HTTP responses.",
-    "meaning": "Forbidden indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 403.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 403.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 403 Forbidden\nContent-Type: text/plain"
-    },
-    "related": [
-      402,
-      404
-    ],
-    "aliases": [
-      "forbidden"
-    ],
-    "keywords": [
-      "403",
-      "forbidden",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.4]",
-    "iana_name": "Forbidden"
-  },
-  {
-    "code": 404,
-    "title": "Not Found",
-    "reference": "[RFC9110, Section 15.5.5]",
-    "slug": "404-not-found",
-    "pathGuide": "/guides/404-not-found/",
-    "pathStatus": "/status/404/",
-    "phrase": "Not Found",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 404 Not Found is a client errors status code used in HTTP responses.",
-    "meaning": "Not Found indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 404.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 404.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 404 Not Found\nContent-Type: text/plain"
-    },
-    "related": [
-      403,
-      405
-    ],
-    "aliases": [
-      "not found"
-    ],
-    "keywords": [
-      "404",
-      "not found",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.5]",
-    "iana_name": "Not Found"
-  },
-  {
-    "code": 405,
-    "title": "Method Not Allowed",
-    "reference": "[RFC9110, Section 15.5.6]",
-    "slug": "405-method-not-allowed",
-    "pathGuide": "/guides/405-method-not-allowed/",
-    "pathStatus": "/status/405/",
-    "phrase": "Method Not Allowed",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 405 Method Not Allowed is a client errors status code used in HTTP responses.",
-    "meaning": "Method Not Allowed indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 405.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 405.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 405 Method Not Allowed\nContent-Type: text/plain"
-    },
-    "related": [
-      404,
-      406
-    ],
-    "aliases": [
-      "method not allowed"
-    ],
-    "keywords": [
-      "405",
-      "method not allowed",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.6]",
-    "iana_name": "Method Not Allowed"
-  },
-  {
-    "code": 406,
-    "title": "Not Acceptable",
-    "reference": "[RFC9110, Section 15.5.7]",
-    "slug": "406-not-acceptable",
-    "pathGuide": "/guides/406-not-acceptable/",
-    "pathStatus": "/status/406/",
-    "phrase": "Not Acceptable",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 406 Not Acceptable is a client errors status code used in HTTP responses.",
-    "meaning": "Not Acceptable indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 406.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 406.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 406 Not Acceptable\nContent-Type: text/plain"
-    },
-    "related": [
-      405,
-      407
-    ],
-    "aliases": [
-      "not acceptable"
-    ],
-    "keywords": [
-      "406",
-      "not acceptable",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.7]",
-    "iana_name": "Not Acceptable"
-  },
-  {
-    "code": 407,
-    "title": "Proxy Authentication Required",
-    "reference": "[RFC9110, Section 15.5.8]",
-    "slug": "407-proxy-authentication-required",
-    "pathGuide": "/guides/407-proxy-authentication-required/",
-    "pathStatus": "/status/407/",
-    "phrase": "Proxy Authentication Required",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 407 Proxy Authentication Required is a client errors status code used in HTTP responses.",
-    "meaning": "Proxy Authentication Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 407.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 407.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 407 Proxy Authentication Required\nContent-Type: text/plain"
-    },
-    "related": [
-      406,
-      408
-    ],
-    "aliases": [
-      "proxy authentication required"
-    ],
-    "keywords": [
-      "407",
-      "proxy authentication required",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.8]",
-    "iana_name": "Proxy Authentication Required"
-  },
-  {
-    "code": 408,
-    "title": "Request Timeout",
-    "reference": "[RFC9110, Section 15.5.9]",
-    "slug": "408-request-timeout",
-    "pathGuide": "/guides/408-request-timeout/",
-    "pathStatus": "/status/408/",
-    "phrase": "Request Timeout",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 408 Request Timeout is a client errors status code used in HTTP responses.",
-    "meaning": "Request Timeout indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 408.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 408.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 408 Request Timeout\nContent-Type: text/plain"
-    },
-    "related": [
-      407,
-      409
-    ],
-    "aliases": [
-      "request timeout"
-    ],
-    "keywords": [
-      "408",
-      "request timeout",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.9]",
-    "iana_name": "Request Timeout"
-  },
-  {
-    "code": 409,
-    "title": "Conflict",
-    "reference": "[RFC9110, Section 15.5.10]",
-    "slug": "409-conflict",
-    "pathGuide": "/guides/409-conflict/",
-    "pathStatus": "/status/409/",
-    "phrase": "Conflict",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 409 Conflict is a client errors status code used in HTTP responses.",
-    "meaning": "Conflict indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 409.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 409.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 409 Conflict\nContent-Type: text/plain"
-    },
-    "related": [
-      408,
-      410
-    ],
-    "aliases": [
-      "conflict"
-    ],
-    "keywords": [
-      "409",
-      "conflict",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.10]",
-    "iana_name": "Conflict"
-  },
-  {
-    "code": 410,
-    "title": "Gone",
-    "reference": "[RFC9110, Section 15.5.11]",
-    "slug": "410-gone",
-    "pathGuide": "/guides/410-gone/",
-    "pathStatus": "/status/410/",
-    "phrase": "Gone",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 410 Gone is a client errors status code used in HTTP responses.",
-    "meaning": "Gone indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 410.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 410.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 410 Gone\nContent-Type: text/plain"
-    },
-    "related": [
-      409,
-      411
-    ],
-    "aliases": [
-      "gone"
-    ],
-    "keywords": [
-      "410",
-      "gone",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.11]",
-    "iana_name": "Gone"
-  },
-  {
-    "code": 411,
-    "title": "Length Required",
-    "reference": "[RFC9110, Section 15.5.12]",
-    "slug": "411-length-required",
-    "pathGuide": "/guides/411-length-required/",
-    "pathStatus": "/status/411/",
-    "phrase": "Length Required",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 411 Length Required is a client errors status code used in HTTP responses.",
-    "meaning": "Length Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 411.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 411.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 411 Length Required\nContent-Type: text/plain"
-    },
-    "related": [
-      410,
-      412
-    ],
-    "aliases": [
-      "length required"
-    ],
-    "keywords": [
-      "411",
-      "length required",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.12]",
-    "iana_name": "Length Required"
-  },
-  {
-    "code": 412,
-    "title": "Precondition Failed",
-    "reference": "[RFC9110, Section 15.5.13]",
-    "slug": "412-precondition-failed",
-    "pathGuide": "/guides/412-precondition-failed/",
-    "pathStatus": "/status/412/",
-    "phrase": "Precondition Failed",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 412 Precondition Failed is a client errors status code used in HTTP responses.",
-    "meaning": "Precondition Failed indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 412.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 412.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 412 Precondition Failed\nContent-Type: text/plain"
-    },
-    "related": [
-      411,
-      413
-    ],
-    "aliases": [
-      "precondition failed"
-    ],
-    "keywords": [
-      "412",
-      "precondition failed",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.13]",
-    "iana_name": "Precondition Failed"
-  },
-  {
-    "code": 413,
-    "title": "Content Too Large",
-    "reference": "[RFC9110, Section 15.5.14]",
-    "slug": "413-content-too-large",
-    "pathGuide": "/guides/413-content-too-large/",
-    "pathStatus": "/status/413/",
-    "phrase": "Content Too Large",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 413 Content Too Large is a client errors status code used in HTTP responses.",
-    "meaning": "Content Too Large indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 413.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 413.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 413 Content Too Large\nContent-Type: text/plain"
-    },
-    "related": [
-      412,
-      414
-    ],
-    "aliases": [
-      "content too large"
-    ],
-    "keywords": [
-      "413",
-      "content too large",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.14]",
-    "iana_name": "Content Too Large"
-  },
-  {
-    "code": 414,
-    "title": "URI Too Long",
-    "reference": "[RFC9110, Section 15.5.15]",
-    "slug": "414-uri-too-long",
-    "pathGuide": "/guides/414-uri-too-long/",
-    "pathStatus": "/status/414/",
-    "phrase": "URI Too Long",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 414 URI Too Long is a client errors status code used in HTTP responses.",
-    "meaning": "URI Too Long indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 414.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 414.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 414 URI Too Long\nContent-Type: text/plain"
-    },
-    "related": [
-      413,
-      415
-    ],
-    "aliases": [
-      "uri too long"
-    ],
-    "keywords": [
-      "414",
-      "uri too long",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.15]",
-    "iana_name": "URI Too Long"
-  },
-  {
-    "code": 415,
-    "title": "Unsupported Media Type",
-    "reference": "[RFC9110, Section 15.5.16]",
-    "slug": "415-unsupported-media-type",
-    "pathGuide": "/guides/415-unsupported-media-type/",
-    "pathStatus": "/status/415/",
-    "phrase": "Unsupported Media Type",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 415 Unsupported Media Type is a client errors status code used in HTTP responses.",
-    "meaning": "Unsupported Media Type indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 415.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 415.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 415 Unsupported Media Type\nContent-Type: text/plain"
-    },
-    "related": [
-      414,
-      416
-    ],
-    "aliases": [
-      "unsupported media type"
-    ],
-    "keywords": [
-      "415",
-      "unsupported media type",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.16]",
-    "iana_name": "Unsupported Media Type"
-  },
-  {
-    "code": 416,
-    "title": "Range Not Satisfiable",
-    "reference": "[RFC9110, Section 15.5.17]",
-    "slug": "416-range-not-satisfiable",
-    "pathGuide": "/guides/416-range-not-satisfiable/",
-    "pathStatus": "/status/416/",
-    "phrase": "Range Not Satisfiable",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 416 Range Not Satisfiable is a client errors status code used in HTTP responses.",
-    "meaning": "Range Not Satisfiable indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 416.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 416.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 416 Range Not Satisfiable\nContent-Type: text/plain"
-    },
-    "related": [
-      415,
-      417
-    ],
-    "aliases": [
-      "range not satisfiable"
-    ],
-    "keywords": [
-      "416",
-      "range not satisfiable",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.17]",
-    "iana_name": "Range Not Satisfiable"
-  },
-  {
-    "code": 417,
-    "title": "Expectation Failed",
-    "reference": "[RFC9110, Section 15.5.18]",
-    "slug": "417-expectation-failed",
-    "pathGuide": "/guides/417-expectation-failed/",
-    "pathStatus": "/status/417/",
-    "phrase": "Expectation Failed",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 417 Expectation Failed is a client errors status code used in HTTP responses.",
-    "meaning": "Expectation Failed indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 417.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 417.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 417 Expectation Failed\nContent-Type: text/plain"
-    },
-    "related": [
-      416,
-      418
-    ],
-    "aliases": [
-      "expectation failed"
-    ],
-    "keywords": [
-      "417",
-      "expectation failed",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.18]",
-    "iana_name": "Expectation Failed"
-  },
-  {
-    "code": 418,
-    "title": "(Unused)",
-    "reference": "[RFC9110, Section 15.5.19]",
-    "slug": "418-unknown",
-    "pathGuide": "/guides/418-unknown/",
-    "pathStatus": "/status/418/",
-    "phrase": "",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 418  is a client errors status code used in HTTP responses.",
-    "meaning": " indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 418.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 418.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 418 \nContent-Type: text/plain"
-    },
-    "related": [
-      417
-    ],
-    "aliases": [
-      ""
-    ],
-    "keywords": [
-      "418",
-      "",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.19]",
-    "iana_name": ""
-  },
-  {
-    "code": 421,
-    "title": "Misdirected Request",
-    "reference": "[RFC9110, Section 15.5.20]",
-    "slug": "421-misdirected-request",
-    "pathGuide": "/guides/421-misdirected-request/",
-    "pathStatus": "/status/421/",
-    "phrase": "Misdirected Request",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 421 Misdirected Request is a client errors status code used in HTTP responses.",
-    "meaning": "Misdirected Request indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 421.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 421.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 421 Misdirected Request\nContent-Type: text/plain"
-    },
-    "related": [
-      422
-    ],
-    "aliases": [
-      "misdirected request"
-    ],
-    "keywords": [
-      "421",
-      "misdirected request",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.20]",
-    "iana_name": "Misdirected Request"
-  },
-  {
-    "code": 422,
-    "title": "Unprocessable Content",
-    "reference": "[RFC9110, Section 15.5.21]",
-    "slug": "422-unprocessable-content",
-    "pathGuide": "/guides/422-unprocessable-content/",
-    "pathStatus": "/status/422/",
-    "phrase": "Unprocessable Content",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 422 Unprocessable Content is a client errors status code used in HTTP responses.",
-    "meaning": "Unprocessable Content indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 422.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 422.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 422 Unprocessable Content\nContent-Type: text/plain"
-    },
-    "related": [
-      421,
-      423
-    ],
-    "aliases": [
-      "unprocessable content"
-    ],
-    "keywords": [
-      "422",
-      "unprocessable content",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.21]",
-    "iana_name": "Unprocessable Content"
-  },
-  {
-    "code": 423,
-    "title": "Locked",
-    "reference": "[RFC4918]",
-    "slug": "423-locked",
-    "pathGuide": "/guides/423-locked/",
-    "pathStatus": "/status/423/",
-    "phrase": "Locked",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 423 Locked is a client errors status code used in HTTP responses.",
-    "meaning": "Locked indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 423.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 423.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 423 Locked\nContent-Type: text/plain"
-    },
-    "related": [
-      422,
-      424
-    ],
-    "aliases": [
-      "locked"
-    ],
-    "keywords": [
-      "423",
-      "locked",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC4918]",
-    "iana_name": "Locked"
-  },
-  {
-    "code": 424,
-    "title": "Failed Dependency",
-    "reference": "[RFC4918]",
-    "slug": "424-failed-dependency",
-    "pathGuide": "/guides/424-failed-dependency/",
-    "pathStatus": "/status/424/",
-    "phrase": "Failed Dependency",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 424 Failed Dependency is a client errors status code used in HTTP responses.",
-    "meaning": "Failed Dependency indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 424.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 424.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 424 Failed Dependency\nContent-Type: text/plain"
-    },
-    "related": [
-      423,
-      425
-    ],
-    "aliases": [
-      "failed dependency"
-    ],
-    "keywords": [
-      "424",
-      "failed dependency",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC4918]",
-    "iana_name": "Failed Dependency"
-  },
-  {
-    "code": 425,
-    "title": "Too Early",
-    "reference": "[RFC8470]",
-    "slug": "425-too-early",
-    "pathGuide": "/guides/425-too-early/",
-    "pathStatus": "/status/425/",
-    "phrase": "Too Early",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 425 Too Early is a client errors status code used in HTTP responses.",
-    "meaning": "Too Early indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 425.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 425.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 425 Too Early\nContent-Type: text/plain"
-    },
-    "related": [
-      424,
-      426
-    ],
-    "aliases": [
-      "too early"
-    ],
-    "keywords": [
-      "425",
-      "too early",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC8470]",
-    "iana_name": "Too Early"
-  },
-  {
-    "code": 426,
-    "title": "Upgrade Required",
-    "reference": "[RFC9110, Section 15.5.22]",
-    "slug": "426-upgrade-required",
-    "pathGuide": "/guides/426-upgrade-required/",
-    "pathStatus": "/status/426/",
-    "phrase": "Upgrade Required",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 426 Upgrade Required is a client errors status code used in HTTP responses.",
-    "meaning": "Upgrade Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 426.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 426.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 426 Upgrade Required\nContent-Type: text/plain"
-    },
-    "related": [
-      425,
-      427
-    ],
-    "aliases": [
-      "upgrade required"
-    ],
-    "keywords": [
-      "426",
-      "upgrade required",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.5.22]",
-    "iana_name": "Upgrade Required"
-  },
-  {
-    "code": 427,
-    "title": "Unassigned",
-    "reference": "",
-    "slug": "427-unassigned",
-    "pathGuide": "/guides/427-unassigned/",
-    "pathStatus": "/status/427/",
-    "phrase": "Unassigned",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 427 Unassigned is a client errors status code used in HTTP responses.",
-    "meaning": "Unassigned indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 427.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 427.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 427 Unassigned\nContent-Type: text/plain"
-    },
-    "related": [
-      426,
-      428
-    ],
-    "aliases": [
-      "unassigned"
-    ],
-    "keywords": [
-      "427",
-      "unassigned",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": false,
-    "notes": "",
-    "rfc": "",
-    "iana_name": "Unassigned"
-  },
-  {
-    "code": 428,
-    "title": "Precondition Required",
-    "reference": "[RFC6585]",
-    "slug": "428-precondition-required",
-    "pathGuide": "/guides/428-precondition-required/",
-    "pathStatus": "/status/428/",
-    "phrase": "Precondition Required",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 428 Precondition Required is a client errors status code used in HTTP responses.",
-    "meaning": "Precondition Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 428.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 428.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 428 Precondition Required\nContent-Type: text/plain"
-    },
-    "related": [
-      427,
-      429
-    ],
-    "aliases": [
-      "precondition required"
-    ],
-    "keywords": [
-      "428",
-      "precondition required",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC6585]",
-    "iana_name": "Precondition Required"
-  },
-  {
-    "code": 429,
-    "title": "Too Many Requests",
-    "reference": "[RFC6585]",
-    "slug": "429-too-many-requests",
-    "pathGuide": "/guides/429-too-many-requests/",
-    "pathStatus": "/status/429/",
-    "phrase": "Too Many Requests",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 429 Too Many Requests is a client errors status code used in HTTP responses.",
-    "meaning": "Too Many Requests indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 429.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 429.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 429 Too Many Requests\nContent-Type: text/plain"
-    },
-    "related": [
-      428,
-      430
-    ],
-    "aliases": [
-      "too many requests"
-    ],
-    "keywords": [
-      "429",
-      "too many requests",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC6585]",
-    "iana_name": "Too Many Requests"
-  },
-  {
-    "code": 430,
-    "title": "Unassigned",
-    "reference": "",
-    "slug": "430-unassigned",
-    "pathGuide": "/guides/430-unassigned/",
-    "pathStatus": "/status/430/",
-    "phrase": "Unassigned",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 430 Unassigned is a client errors status code used in HTTP responses.",
-    "meaning": "Unassigned indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 430.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 430.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 430 Unassigned\nContent-Type: text/plain"
-    },
-    "related": [
-      429,
-      431
-    ],
-    "aliases": [
-      "unassigned"
-    ],
-    "keywords": [
-      "430",
-      "unassigned",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": false,
-    "notes": "",
-    "rfc": "",
-    "iana_name": "Unassigned"
-  },
-  {
-    "code": 431,
-    "title": "Request Header Fields Too Large",
-    "reference": "[RFC6585]",
-    "slug": "431-request-header-fields-too-large",
-    "pathGuide": "/guides/431-request-header-fields-too-large/",
-    "pathStatus": "/status/431/",
-    "phrase": "Request Header Fields Too Large",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 431 Request Header Fields Too Large is a client errors status code used in HTTP responses.",
-    "meaning": "Request Header Fields Too Large indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 431.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 431.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 431 Request Header Fields Too Large\nContent-Type: text/plain"
-    },
-    "related": [
-      430
-    ],
-    "aliases": [
-      "request header fields too large"
-    ],
-    "keywords": [
-      "431",
-      "request header fields too large",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC6585]",
-    "iana_name": "Request Header Fields Too Large"
-  },
-  {
-    "code": 451,
-    "title": "Unavailable For Legal Reasons",
-    "reference": "[RFC7725]",
-    "slug": "451-unavailable-for-legal-reasons",
-    "pathGuide": "/guides/451-unavailable-for-legal-reasons/",
-    "pathStatus": "/status/451/",
-    "phrase": "Unavailable For Legal Reasons",
-    "category": "Client Errors",
-    "class": 4,
-    "summary": "HTTP 451 Unavailable For Legal Reasons is a client errors status code used in HTTP responses.",
-    "meaning": "Unavailable For Legal Reasons indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 451.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 451.",
-      "Apply handling based on client errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 451 Unavailable For Legal Reasons\nContent-Type: text/plain"
-    },
-    "related": [],
-    "aliases": [
-      "unavailable for legal reasons"
-    ],
-    "keywords": [
-      "451",
-      "unavailable for legal reasons",
-      "client errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC7725]",
-    "iana_name": "Unavailable For Legal Reasons"
-  },
-  {
-    "code": 500,
-    "title": "Internal Server Error",
-    "reference": "[RFC9110, Section 15.6.1]",
-    "slug": "500-internal-server-error",
-    "pathGuide": "/guides/500-internal-server-error/",
-    "pathStatus": "/status/500/",
-    "phrase": "Internal Server Error",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 500 Internal Server Error is a server errors status code used in HTTP responses.",
-    "meaning": "Internal Server Error indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 500.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 500.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 500 Internal Server Error\nContent-Type: text/plain"
-    },
-    "related": [
-      501
-    ],
-    "aliases": [
-      "internal server error"
-    ],
-    "keywords": [
-      "500",
-      "internal server error",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.1]",
-    "iana_name": "Internal Server Error"
-  },
-  {
-    "code": 501,
-    "title": "Not Implemented",
-    "reference": "[RFC9110, Section 15.6.2]",
-    "slug": "501-not-implemented",
-    "pathGuide": "/guides/501-not-implemented/",
-    "pathStatus": "/status/501/",
-    "phrase": "Not Implemented",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 501 Not Implemented is a server errors status code used in HTTP responses.",
-    "meaning": "Not Implemented indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 501.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 501.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 501 Not Implemented\nContent-Type: text/plain"
-    },
-    "related": [
-      500,
-      502
-    ],
-    "aliases": [
-      "not implemented"
-    ],
-    "keywords": [
-      "501",
-      "not implemented",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.2]",
-    "iana_name": "Not Implemented"
-  },
-  {
-    "code": 502,
-    "title": "Bad Gateway",
-    "reference": "[RFC9110, Section 15.6.3]",
-    "slug": "502-bad-gateway",
-    "pathGuide": "/guides/502-bad-gateway/",
-    "pathStatus": "/status/502/",
-    "phrase": "Bad Gateway",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 502 Bad Gateway is a server errors status code used in HTTP responses.",
-    "meaning": "Bad Gateway indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 502.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 502.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 502 Bad Gateway\nContent-Type: text/plain"
-    },
-    "related": [
-      501,
-      503
-    ],
-    "aliases": [
-      "bad gateway"
-    ],
-    "keywords": [
-      "502",
-      "bad gateway",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.3]",
-    "iana_name": "Bad Gateway"
-  },
-  {
-    "code": 503,
-    "title": "Service Unavailable",
-    "reference": "[RFC9110, Section 15.6.4]",
-    "slug": "503-service-unavailable",
-    "pathGuide": "/guides/503-service-unavailable/",
-    "pathStatus": "/status/503/",
-    "phrase": "Service Unavailable",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 503 Service Unavailable is a server errors status code used in HTTP responses.",
-    "meaning": "Service Unavailable indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 503.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 503.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 503 Service Unavailable\nContent-Type: text/plain"
-    },
-    "related": [
-      502,
-      504
-    ],
-    "aliases": [
-      "service unavailable"
-    ],
-    "keywords": [
-      "503",
-      "service unavailable",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.4]",
-    "iana_name": "Service Unavailable"
-  },
-  {
-    "code": 504,
-    "title": "Gateway Timeout",
-    "reference": "[RFC9110, Section 15.6.5]",
-    "slug": "504-gateway-timeout",
-    "pathGuide": "/guides/504-gateway-timeout/",
-    "pathStatus": "/status/504/",
-    "phrase": "Gateway Timeout",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 504 Gateway Timeout is a server errors status code used in HTTP responses.",
-    "meaning": "Gateway Timeout indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 504.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 504.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 504 Gateway Timeout\nContent-Type: text/plain"
-    },
-    "related": [
-      503,
-      505
-    ],
-    "aliases": [
-      "gateway timeout"
-    ],
-    "keywords": [
-      "504",
-      "gateway timeout",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.5]",
-    "iana_name": "Gateway Timeout"
-  },
-  {
-    "code": 505,
-    "title": "HTTP Version Not Supported",
-    "reference": "[RFC9110, Section 15.6.6]",
-    "slug": "505-http-version-not-supported",
-    "pathGuide": "/guides/505-http-version-not-supported/",
-    "pathStatus": "/status/505/",
-    "phrase": "HTTP Version Not Supported",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 505 HTTP Version Not Supported is a server errors status code used in HTTP responses.",
-    "meaning": "HTTP Version Not Supported indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 505.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 505.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 505 HTTP Version Not Supported\nContent-Type: text/plain"
-    },
-    "related": [
-      504,
-      506
-    ],
-    "aliases": [
-      "http version not supported"
-    ],
-    "keywords": [
-      "505",
-      "http version not supported",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC9110, Section 15.6.6]",
-    "iana_name": "HTTP Version Not Supported"
-  },
-  {
-    "code": 506,
-    "title": "Variant Also Negotiates",
-    "reference": "[RFC2295]",
-    "slug": "506-variant-also-negotiates",
-    "pathGuide": "/guides/506-variant-also-negotiates/",
-    "pathStatus": "/status/506/",
-    "phrase": "Variant Also Negotiates",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 506 Variant Also Negotiates is a server errors status code used in HTTP responses.",
-    "meaning": "Variant Also Negotiates indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 506.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 506.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 506 Variant Also Negotiates\nContent-Type: text/plain"
-    },
-    "related": [
-      505,
-      507
-    ],
-    "aliases": [
-      "variant also negotiates"
-    ],
-    "keywords": [
-      "506",
-      "variant also negotiates",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC2295]",
-    "iana_name": "Variant Also Negotiates"
-  },
-  {
-    "code": 507,
-    "title": "Insufficient Storage",
-    "reference": "[RFC4918]",
-    "slug": "507-insufficient-storage",
-    "pathGuide": "/guides/507-insufficient-storage/",
-    "pathStatus": "/status/507/",
-    "phrase": "Insufficient Storage",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 507 Insufficient Storage is a server errors status code used in HTTP responses.",
-    "meaning": "Insufficient Storage indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 507.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 507.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 507 Insufficient Storage\nContent-Type: text/plain"
-    },
-    "related": [
-      506,
-      508
-    ],
-    "aliases": [
-      "insufficient storage"
-    ],
-    "keywords": [
-      "507",
-      "insufficient storage",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC4918]",
-    "iana_name": "Insufficient Storage"
-  },
-  {
-    "code": 508,
-    "title": "Loop Detected",
-    "reference": "[RFC5842]",
-    "slug": "508-loop-detected",
-    "pathGuide": "/guides/508-loop-detected/",
-    "pathStatus": "/status/508/",
-    "phrase": "Loop Detected",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 508 Loop Detected is a server errors status code used in HTTP responses.",
-    "meaning": "Loop Detected indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 508.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 508.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 508 Loop Detected\nContent-Type: text/plain"
-    },
-    "related": [
-      507,
-      509
-    ],
-    "aliases": [
-      "loop detected"
-    ],
-    "keywords": [
-      "508",
-      "loop detected",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC5842]",
-    "iana_name": "Loop Detected"
-  },
-  {
-    "code": 509,
-    "title": "Unassigned",
-    "reference": "",
-    "slug": "509-unassigned",
-    "pathGuide": "/guides/509-unassigned/",
-    "pathStatus": "/status/509/",
-    "phrase": "Unassigned",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 509 Unassigned is a server errors status code used in HTTP responses.",
-    "meaning": "Unassigned indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 509.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 509.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 509 Unassigned\nContent-Type: text/plain"
-    },
-    "related": [
-      508,
-      510
-    ],
-    "aliases": [
-      "unassigned"
-    ],
-    "keywords": [
-      "509",
-      "unassigned",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": false,
-    "notes": "",
-    "rfc": "",
-    "iana_name": "Unassigned"
-  },
-  {
-    "code": 510,
-    "title": "Not Extended (OBSOLETED)",
-    "reference": "[RFC2774][Status change of HTTP experiments to Historic]",
-    "slug": "510-not-extended",
-    "pathGuide": "/guides/510-not-extended/",
-    "pathStatus": "/status/510/",
-    "phrase": "Not Extended",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 510 Not Extended is a server errors status code used in HTTP responses.",
-    "meaning": "Not Extended indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 510.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 510.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 510 Not Extended\nContent-Type: text/plain"
-    },
-    "related": [
-      509,
-      511
-    ],
-    "aliases": [
-      "not extended"
-    ],
-    "keywords": [
-      "510",
-      "not extended",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC2774][Status change of HTTP experiments to Historic]",
-    "iana_name": "Not Extended"
-  },
-  {
-    "code": 511,
-    "title": "Network Authentication Required",
-    "reference": "[RFC6585]",
-    "slug": "511-network-authentication-required",
-    "pathGuide": "/guides/511-network-authentication-required/",
-    "pathStatus": "/status/511/",
-    "phrase": "Network Authentication Required",
-    "category": "Server Errors",
-    "class": 5,
-    "summary": "HTTP 511 Network Authentication Required is a server errors status code used in HTTP responses.",
-    "meaning": "Network Authentication Required indicates how the server handled the request and what the client should do next.",
-    "causes": [
-      "Request matched conditions for 511.",
-      "Application or upstream behavior returned this status."
-    ],
-    "fixes": [
-      "Inspect logs and response headers for 511.",
-      "Apply handling based on server errors semantics."
-    ],
-    "examples": {
-      "request": "GET /resource HTTP/1.1\nHost: example.com",
-      "response": "HTTP/1.1 511 Network Authentication Required\nContent-Type: text/plain"
-    },
-    "related": [
-      510
-    ],
-    "aliases": [
-      "network authentication required"
-    ],
-    "keywords": [
-      "511",
-      "network authentication required",
-      "server errors"
-    ],
-    "compare": [],
-    "indexable": true,
-    "official": true,
-    "notes": "",
-    "rfc": "[RFC6585]",
-    "iana_name": "Network Authentication Required"
-  }
-]
+{
+  "site": {
+    "name": "ErrorLookup",
+    "domain": "https://errorlookup.com",
+    "defaultTitle": "HTTP Status Code Lookup, Meanings, Causes, and Fixes",
+    "defaultDescription": "Lookup HTTP status codes, understand what they mean, compare related errors, and find fixes for common server, client, and redirect issues."
+  },
+  "codes": [
+    {
+      "code": 100,
+      "slug": "100-continue",
+      "pathGuide": "/guides/100-continue/",
+      "pathStatus": "/status/100/",
+      "title": "HTTP 100 Continue",
+      "phrase": "Continue",
+      "iana_name": "Continue",
+      "category": "1xx",
+      "class": "informational",
+      "summary": "HTTP 100 Continue indicates a informational response outcome.",
+      "meaning": "Continue describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 100 Continue"
+      },
+      "related": [
+        101
+      ],
+      "aliases": [
+        "100 continue",
+        "http 100"
+      ],
+      "keywords": [
+        "http 100",
+        "100 continue",
+        "informational status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 101,
+      "slug": "101-switching-protocols",
+      "pathGuide": "/guides/101-switching-protocols/",
+      "pathStatus": "/status/101/",
+      "title": "HTTP 101 Switching Protocols",
+      "phrase": "Switching Protocols",
+      "iana_name": "Switching Protocols",
+      "category": "1xx",
+      "class": "informational",
+      "summary": "HTTP 101 Switching Protocols indicates a informational response outcome.",
+      "meaning": "Switching Protocols describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 101 Switching Protocols"
+      },
+      "related": [
+        100,
+        102
+      ],
+      "aliases": [
+        "101 switching protocols",
+        "http 101"
+      ],
+      "keywords": [
+        "http 101",
+        "101 switching protocols",
+        "informational status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 102,
+      "slug": "102-processing",
+      "pathGuide": "/guides/102-processing/",
+      "pathStatus": "/status/102/",
+      "title": "HTTP 102 Processing",
+      "phrase": "Processing",
+      "iana_name": "Processing",
+      "category": "1xx",
+      "class": "informational",
+      "summary": "HTTP 102 Processing indicates a informational response outcome.",
+      "meaning": "Processing describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 102 Processing"
+      },
+      "related": [
+        101,
+        103
+      ],
+      "aliases": [
+        "102 processing",
+        "http 102"
+      ],
+      "keywords": [
+        "http 102",
+        "102 processing",
+        "informational status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 103,
+      "slug": "103-early-hints",
+      "pathGuide": "/guides/103-early-hints/",
+      "pathStatus": "/status/103/",
+      "title": "HTTP 103 Early Hints",
+      "phrase": "Early Hints",
+      "iana_name": "Early Hints",
+      "category": "1xx",
+      "class": "informational",
+      "summary": "HTTP 103 Early Hints indicates a informational response outcome.",
+      "meaning": "Early Hints describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 103 Early Hints"
+      },
+      "related": [
+        102,
+        104
+      ],
+      "aliases": [
+        "103 early hints",
+        "http 103"
+      ],
+      "keywords": [
+        "http 103",
+        "103 early hints",
+        "informational status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 104,
+      "slug": "104-upload-resumption-supported",
+      "pathGuide": "/guides/104-upload-resumption-supported/",
+      "pathStatus": "/status/104/",
+      "title": "HTTP 104 Upload Resumption Supported",
+      "phrase": "Upload Resumption Supported",
+      "iana_name": "Upload Resumption Supported",
+      "category": "1xx",
+      "class": "informational",
+      "summary": "HTTP 104 Upload Resumption Supported indicates a informational response outcome.",
+      "meaning": "Upload Resumption Supported describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 104 Upload Resumption Supported"
+      },
+      "related": [
+        103
+      ],
+      "aliases": [
+        "104 upload resumption supported",
+        "http 104"
+      ],
+      "keywords": [
+        "http 104",
+        "104 upload resumption supported",
+        "informational status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 200,
+      "slug": "200-ok",
+      "pathGuide": "/guides/200-ok/",
+      "pathStatus": "/status/200/",
+      "title": "HTTP 200 OK",
+      "phrase": "OK",
+      "iana_name": "OK",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 200 OK indicates a success response outcome.",
+      "meaning": "OK describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal successful request"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET / HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 200 OK\nContent-Type: text/html"
+      },
+      "related": [
+        201,
+        204,
+        206
+      ],
+      "aliases": [
+        "200 ok",
+        "http 200"
+      ],
+      "keywords": [
+        "http 200",
+        "200 ok",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 201,
+      "slug": "201-created",
+      "pathGuide": "/guides/201-created/",
+      "pathStatus": "/status/201/",
+      "title": "HTTP 201 Created",
+      "phrase": "Created",
+      "iana_name": "Created",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 201 Created indicates a success response outcome.",
+      "meaning": "Created describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 201 Created"
+      },
+      "related": [
+        200,
+        202
+      ],
+      "aliases": [
+        "201 created",
+        "http 201"
+      ],
+      "keywords": [
+        "http 201",
+        "201 created",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 202,
+      "slug": "202-accepted",
+      "pathGuide": "/guides/202-accepted/",
+      "pathStatus": "/status/202/",
+      "title": "HTTP 202 Accepted",
+      "phrase": "Accepted",
+      "iana_name": "Accepted",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 202 Accepted indicates a success response outcome.",
+      "meaning": "Accepted describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 202 Accepted"
+      },
+      "related": [
+        201,
+        203
+      ],
+      "aliases": [
+        "202 accepted",
+        "http 202"
+      ],
+      "keywords": [
+        "http 202",
+        "202 accepted",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 203,
+      "slug": "203-non-authoritative-information",
+      "pathGuide": "/guides/203-non-authoritative-information/",
+      "pathStatus": "/status/203/",
+      "title": "HTTP 203 Non-Authoritative Information",
+      "phrase": "Non-Authoritative Information",
+      "iana_name": "Non-Authoritative Information",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 203 Non-Authoritative Information indicates a success response outcome.",
+      "meaning": "Non-Authoritative Information describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 203 Non-Authoritative Information"
+      },
+      "related": [
+        202,
+        204
+      ],
+      "aliases": [
+        "203 non-authoritative information",
+        "http 203"
+      ],
+      "keywords": [
+        "http 203",
+        "203 non-authoritative information",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 204,
+      "slug": "204-no-content",
+      "pathGuide": "/guides/204-no-content/",
+      "pathStatus": "/status/204/",
+      "title": "HTTP 204 No Content",
+      "phrase": "No Content",
+      "iana_name": "No Content",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 204 No Content indicates a success response outcome.",
+      "meaning": "No Content describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 204 No Content"
+      },
+      "related": [
+        203,
+        205
+      ],
+      "aliases": [
+        "204 no content",
+        "http 204"
+      ],
+      "keywords": [
+        "http 204",
+        "204 no content",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 205,
+      "slug": "205-reset-content",
+      "pathGuide": "/guides/205-reset-content/",
+      "pathStatus": "/status/205/",
+      "title": "HTTP 205 Reset Content",
+      "phrase": "Reset Content",
+      "iana_name": "Reset Content",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 205 Reset Content indicates a success response outcome.",
+      "meaning": "Reset Content describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 205 Reset Content"
+      },
+      "related": [
+        204,
+        206
+      ],
+      "aliases": [
+        "205 reset content",
+        "http 205"
+      ],
+      "keywords": [
+        "http 205",
+        "205 reset content",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 206,
+      "slug": "206-partial-content",
+      "pathGuide": "/guides/206-partial-content/",
+      "pathStatus": "/status/206/",
+      "title": "HTTP 206 Partial Content",
+      "phrase": "Partial Content",
+      "iana_name": "Partial Content",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 206 Partial Content indicates a success response outcome.",
+      "meaning": "Partial Content describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 206 Partial Content"
+      },
+      "related": [
+        205,
+        207
+      ],
+      "aliases": [
+        "206 partial content",
+        "http 206"
+      ],
+      "keywords": [
+        "http 206",
+        "206 partial content",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 207,
+      "slug": "207-multi-status",
+      "pathGuide": "/guides/207-multi-status/",
+      "pathStatus": "/status/207/",
+      "title": "HTTP 207 Multi-Status",
+      "phrase": "Multi-Status",
+      "iana_name": "Multi-Status",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 207 Multi-Status indicates a success response outcome.",
+      "meaning": "Multi-Status describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 207 Multi-Status"
+      },
+      "related": [
+        206,
+        208
+      ],
+      "aliases": [
+        "207 multi-status",
+        "http 207"
+      ],
+      "keywords": [
+        "http 207",
+        "207 multi-status",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 208,
+      "slug": "208-already-reported",
+      "pathGuide": "/guides/208-already-reported/",
+      "pathStatus": "/status/208/",
+      "title": "HTTP 208 Already Reported",
+      "phrase": "Already Reported",
+      "iana_name": "Already Reported",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 208 Already Reported indicates a success response outcome.",
+      "meaning": "Already Reported describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 208 Already Reported"
+      },
+      "related": [
+        207
+      ],
+      "aliases": [
+        "208 already reported",
+        "http 208"
+      ],
+      "keywords": [
+        "http 208",
+        "208 already reported",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 226,
+      "slug": "226-im-used",
+      "pathGuide": "/guides/226-im-used/",
+      "pathStatus": "/status/226/",
+      "title": "HTTP 226 IM Used",
+      "phrase": "IM Used",
+      "iana_name": "IM Used",
+      "category": "2xx",
+      "class": "success",
+      "summary": "HTTP 226 IM Used indicates a success response outcome.",
+      "meaning": "IM Used describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Normal protocol behavior"
+      ],
+      "fixes": [
+        "No fix needed"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 226 IM Used"
+      },
+      "related": [],
+      "aliases": [
+        "226 im used",
+        "http 226"
+      ],
+      "keywords": [
+        "http 226",
+        "226 im used",
+        "success status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 300,
+      "slug": "300-multiple-choices",
+      "pathGuide": "/guides/300-multiple-choices/",
+      "pathStatus": "/status/300/",
+      "title": "HTTP 300 Multiple Choices",
+      "phrase": "Multiple Choices",
+      "iana_name": "Multiple Choices",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 300 Multiple Choices indicates a redirection response outcome.",
+      "meaning": "Multiple Choices describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 300 Multiple Choices"
+      },
+      "related": [
+        301
+      ],
+      "aliases": [
+        "300 multiple choices",
+        "http 300"
+      ],
+      "keywords": [
+        "http 300",
+        "300 multiple choices",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 301,
+      "slug": "301-moved-permanently",
+      "pathGuide": "/guides/301-moved-permanently/",
+      "pathStatus": "/status/301/",
+      "title": "HTTP 301 Moved Permanently",
+      "phrase": "Moved Permanently",
+      "iana_name": "Moved Permanently",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 301 Moved Permanently indicates a redirection response outcome.",
+      "meaning": "Moved Permanently describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Site migration",
+        "URL restructuring",
+        "Canonical redirect setup"
+      ],
+      "fixes": [
+        "Point links to the destination URL",
+        "Use 301 only for permanent moves",
+        "Avoid redirect chains"
+      ],
+      "examples": {
+        "request": "GET /old-page HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 301 Moved Permanently\nLocation: /new-page"
+      },
+      "related": [
+        302,
+        307,
+        308
+      ],
+      "aliases": [
+        "301 moved permanently",
+        "http 301"
+      ],
+      "keywords": [
+        "http 301",
+        "301 moved permanently",
+        "redirection status codes"
+      ],
+      "compare": [
+        "/compare/301-vs-302/"
+      ],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 302,
+      "slug": "302-found",
+      "pathGuide": "/guides/302-found/",
+      "pathStatus": "/status/302/",
+      "title": "HTTP 302 Found",
+      "phrase": "Found",
+      "iana_name": "Found",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 302 Found indicates a redirection response outcome.",
+      "meaning": "Found describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Temporary campaign page",
+        "A/B test routing",
+        "Short-term redirect logic"
+      ],
+      "fixes": [
+        "Use only for temporary moves",
+        "Switch to 301 or 308 if permanent",
+        "Test method preservation behavior where relevant"
+      ],
+      "examples": {
+        "request": "GET /promo HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 302 Found\nLocation: /promo-spring"
+      },
+      "related": [
+        301,
+        303,
+        307,
+        308
+      ],
+      "aliases": [
+        "302 found",
+        "http 302"
+      ],
+      "keywords": [
+        "http 302",
+        "302 found",
+        "redirection status codes"
+      ],
+      "compare": [
+        "/compare/301-vs-302/"
+      ],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 303,
+      "slug": "303-see-other",
+      "pathGuide": "/guides/303-see-other/",
+      "pathStatus": "/status/303/",
+      "title": "HTTP 303 See Other",
+      "phrase": "See Other",
+      "iana_name": "See Other",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 303 See Other indicates a redirection response outcome.",
+      "meaning": "See Other describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 303 See Other"
+      },
+      "related": [
+        302,
+        304
+      ],
+      "aliases": [
+        "303 see other",
+        "http 303"
+      ],
+      "keywords": [
+        "http 303",
+        "303 see other",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 304,
+      "slug": "304-not-modified",
+      "pathGuide": "/guides/304-not-modified/",
+      "pathStatus": "/status/304/",
+      "title": "HTTP 304 Not Modified",
+      "phrase": "Not Modified",
+      "iana_name": "Not Modified",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 304 Not Modified indicates a redirection response outcome.",
+      "meaning": "Not Modified describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 304 Not Modified"
+      },
+      "related": [
+        303,
+        305
+      ],
+      "aliases": [
+        "304 not modified",
+        "http 304"
+      ],
+      "keywords": [
+        "http 304",
+        "304 not modified",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 305,
+      "slug": "305-use-proxy",
+      "pathGuide": "/guides/305-use-proxy/",
+      "pathStatus": "/status/305/",
+      "title": "HTTP 305 Use Proxy",
+      "phrase": "Use Proxy",
+      "iana_name": "Use Proxy",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 305 Use Proxy indicates a redirection response outcome.",
+      "meaning": "Use Proxy describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 305 Use Proxy"
+      },
+      "related": [
+        304,
+        306
+      ],
+      "aliases": [
+        "305 use proxy",
+        "http 305"
+      ],
+      "keywords": [
+        "http 305",
+        "305 use proxy",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 306,
+      "slug": "306-unknown",
+      "pathGuide": "/guides/306-unknown/",
+      "pathStatus": "/status/306/",
+      "title": "HTTP 306 Unused",
+      "phrase": "Unused",
+      "iana_name": "(Unused)",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "This code is unused and reserved in historical context.",
+      "meaning": "Do not rely on this code in modern implementations.",
+      "causes": [],
+      "fixes": [
+        "Use an assigned modern status code instead"
+      ],
+      "examples": {
+        "request": "",
+        "response": ""
+      },
+      "related": [
+        301,
+        302,
+        307,
+        308
+      ],
+      "aliases": [
+        "306 unused",
+        "http 306"
+      ],
+      "keywords": [
+        "http 306",
+        "306 unused",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "Mark clearly as unused.",
+      "rfc": "RFC 9110",
+      "status": "unused"
+    },
+    {
+      "code": 307,
+      "slug": "307-temporary-redirect",
+      "pathGuide": "/guides/307-temporary-redirect/",
+      "pathStatus": "/status/307/",
+      "title": "HTTP 307 Temporary Redirect",
+      "phrase": "Temporary Redirect",
+      "iana_name": "Temporary Redirect",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 307 Temporary Redirect indicates a redirection response outcome.",
+      "meaning": "Temporary Redirect describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 307 Temporary Redirect"
+      },
+      "related": [
+        306,
+        308
+      ],
+      "aliases": [
+        "307 temporary redirect",
+        "http 307"
+      ],
+      "keywords": [
+        "http 307",
+        "307 temporary redirect",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "temporary"
+    },
+    {
+      "code": 308,
+      "slug": "308-permanent-redirect",
+      "pathGuide": "/guides/308-permanent-redirect/",
+      "pathStatus": "/status/308/",
+      "title": "HTTP 308 Permanent Redirect",
+      "phrase": "Permanent Redirect",
+      "iana_name": "Permanent Redirect",
+      "category": "3xx",
+      "class": "redirect-codes",
+      "summary": "HTTP 308 Permanent Redirect indicates a redirection response outcome.",
+      "meaning": "Permanent Redirect describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Resource moved to a different URI",
+        "Canonicalization or routing rule",
+        "Caching or method-preservation choice"
+      ],
+      "fixes": [
+        "Confirm redirect destination and protocol",
+        "Prevent redirect chains/loops",
+        "Use the correct permanent vs temporary code"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 308 Permanent Redirect"
+      },
+      "related": [
+        307
+      ],
+      "aliases": [
+        "308 permanent redirect",
+        "http 308"
+      ],
+      "keywords": [
+        "http 308",
+        "308 permanent redirect",
+        "redirection status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 400,
+      "slug": "400-bad-request",
+      "pathGuide": "/guides/400-bad-request/",
+      "pathStatus": "/status/400/",
+      "title": "HTTP 400 Bad Request",
+      "phrase": "Bad Request",
+      "iana_name": "Bad Request",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 400 Bad Request indicates a client errors response outcome.",
+      "meaning": "Bad Request describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 400 Bad Request"
+      },
+      "related": [
+        401
+      ],
+      "aliases": [
+        "400 bad request",
+        "http 400"
+      ],
+      "keywords": [
+        "http 400",
+        "400 bad request",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 401,
+      "slug": "401-unauthorized",
+      "pathGuide": "/guides/401-unauthorized/",
+      "pathStatus": "/status/401/",
+      "title": "HTTP 401 Unauthorized",
+      "phrase": "Unauthorized",
+      "iana_name": "Unauthorized",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 401 Unauthorized indicates a client errors response outcome.",
+      "meaning": "Unauthorized describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 401 Unauthorized"
+      },
+      "related": [
+        400,
+        402
+      ],
+      "aliases": [
+        "401 unauthorized",
+        "http 401"
+      ],
+      "keywords": [
+        "http 401",
+        "401 unauthorized",
+        "client errors status codes"
+      ],
+      "compare": [
+        "/compare/401-vs-403/"
+      ],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 402,
+      "slug": "402-payment-required",
+      "pathGuide": "/guides/402-payment-required/",
+      "pathStatus": "/status/402/",
+      "title": "HTTP 402 Payment Required",
+      "phrase": "Payment Required",
+      "iana_name": "Payment Required",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 402 Payment Required indicates a client errors response outcome.",
+      "meaning": "Payment Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 402 Payment Required"
+      },
+      "related": [
+        401,
+        403
+      ],
+      "aliases": [
+        "402 payment required",
+        "http 402"
+      ],
+      "keywords": [
+        "http 402",
+        "402 payment required",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 403,
+      "slug": "403-forbidden",
+      "pathGuide": "/guides/403-forbidden/",
+      "pathStatus": "/status/403/",
+      "title": "HTTP 403 Forbidden",
+      "phrase": "Forbidden",
+      "iana_name": "Forbidden",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 403 Forbidden indicates a client errors response outcome.",
+      "meaning": "Forbidden describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 403 Forbidden"
+      },
+      "related": [
+        402,
+        404
+      ],
+      "aliases": [
+        "403 forbidden",
+        "http 403"
+      ],
+      "keywords": [
+        "http 403",
+        "403 forbidden",
+        "client errors status codes"
+      ],
+      "compare": [
+        "/compare/401-vs-403/",
+        "/compare/403-vs-404/"
+      ],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 404,
+      "slug": "404-not-found",
+      "pathGuide": "/guides/404-not-found/",
+      "pathStatus": "/status/404/",
+      "title": "HTTP 404 Not Found",
+      "phrase": "Not Found",
+      "iana_name": "Not Found",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 404 Not Found indicates a client errors response outcome.",
+      "meaning": "Not Found describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Broken internal link",
+        "Deleted page",
+        "Incorrect URL",
+        "Routing mismatch",
+        "Missing rewrite rule"
+      ],
+      "fixes": [
+        "Verify the URL",
+        "Restore the resource if it was removed unintentionally",
+        "Add or correct server routing",
+        "Set up a redirect if the page moved",
+        "Update internal links"
+      ],
+      "examples": {
+        "request": "GET /missing-page HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 404 Not Found\nContent-Type: text/html"
+      },
+      "related": [
+        400,
+        403,
+        410
+      ],
+      "aliases": [
+        "404 error",
+        "page not found"
+      ],
+      "keywords": [
+        "404 not found",
+        "http 404",
+        "page not found",
+        "broken link",
+        "resource missing"
+      ],
+      "compare": [
+        "/compare/403-vs-404/"
+      ],
+      "faq": [
+        {
+          "q": "Does 404 mean the server is down?",
+          "a": "No. It means the resource was not found at that URL."
+        },
+        {
+          "q": "Should I redirect all 404 pages?",
+          "a": "Only when there is a relevant replacement resource."
+        }
+      ],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 405,
+      "slug": "405-method-not-allowed",
+      "pathGuide": "/guides/405-method-not-allowed/",
+      "pathStatus": "/status/405/",
+      "title": "HTTP 405 Method Not Allowed",
+      "phrase": "Method Not Allowed",
+      "iana_name": "Method Not Allowed",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 405 Method Not Allowed indicates a client errors response outcome.",
+      "meaning": "Method Not Allowed describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 405 Method Not Allowed"
+      },
+      "related": [
+        404,
+        406
+      ],
+      "aliases": [
+        "405 method not allowed",
+        "http 405"
+      ],
+      "keywords": [
+        "http 405",
+        "405 method not allowed",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 406,
+      "slug": "406-not-acceptable",
+      "pathGuide": "/guides/406-not-acceptable/",
+      "pathStatus": "/status/406/",
+      "title": "HTTP 406 Not Acceptable",
+      "phrase": "Not Acceptable",
+      "iana_name": "Not Acceptable",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 406 Not Acceptable indicates a client errors response outcome.",
+      "meaning": "Not Acceptable describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 406 Not Acceptable"
+      },
+      "related": [
+        405,
+        407
+      ],
+      "aliases": [
+        "406 not acceptable",
+        "http 406"
+      ],
+      "keywords": [
+        "http 406",
+        "406 not acceptable",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 407,
+      "slug": "407-proxy-authentication-required",
+      "pathGuide": "/guides/407-proxy-authentication-required/",
+      "pathStatus": "/status/407/",
+      "title": "HTTP 407 Proxy Authentication Required",
+      "phrase": "Proxy Authentication Required",
+      "iana_name": "Proxy Authentication Required",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 407 Proxy Authentication Required indicates a client errors response outcome.",
+      "meaning": "Proxy Authentication Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 407 Proxy Authentication Required"
+      },
+      "related": [
+        406,
+        408
+      ],
+      "aliases": [
+        "407 proxy authentication required",
+        "http 407"
+      ],
+      "keywords": [
+        "http 407",
+        "407 proxy authentication required",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 408,
+      "slug": "408-request-timeout",
+      "pathGuide": "/guides/408-request-timeout/",
+      "pathStatus": "/status/408/",
+      "title": "HTTP 408 Request Timeout",
+      "phrase": "Request Timeout",
+      "iana_name": "Request Timeout",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 408 Request Timeout indicates a client errors response outcome.",
+      "meaning": "Request Timeout describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 408 Request Timeout"
+      },
+      "related": [
+        407,
+        409
+      ],
+      "aliases": [
+        "408 request timeout",
+        "http 408"
+      ],
+      "keywords": [
+        "http 408",
+        "408 request timeout",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 409,
+      "slug": "409-conflict",
+      "pathGuide": "/guides/409-conflict/",
+      "pathStatus": "/status/409/",
+      "title": "HTTP 409 Conflict",
+      "phrase": "Conflict",
+      "iana_name": "Conflict",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 409 Conflict indicates a client errors response outcome.",
+      "meaning": "Conflict describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 409 Conflict"
+      },
+      "related": [
+        408,
+        410
+      ],
+      "aliases": [
+        "409 conflict",
+        "http 409"
+      ],
+      "keywords": [
+        "http 409",
+        "409 conflict",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 410,
+      "slug": "410-gone",
+      "pathGuide": "/guides/410-gone/",
+      "pathStatus": "/status/410/",
+      "title": "HTTP 410 Gone",
+      "phrase": "Gone",
+      "iana_name": "Gone",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 410 Gone indicates a client errors response outcome.",
+      "meaning": "Gone describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 410 Gone"
+      },
+      "related": [
+        409,
+        411
+      ],
+      "aliases": [
+        "410 gone",
+        "http 410"
+      ],
+      "keywords": [
+        "http 410",
+        "410 gone",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 411,
+      "slug": "411-length-required",
+      "pathGuide": "/guides/411-length-required/",
+      "pathStatus": "/status/411/",
+      "title": "HTTP 411 Length Required",
+      "phrase": "Length Required",
+      "iana_name": "Length Required",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 411 Length Required indicates a client errors response outcome.",
+      "meaning": "Length Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 411 Length Required"
+      },
+      "related": [
+        410,
+        412
+      ],
+      "aliases": [
+        "411 length required",
+        "http 411"
+      ],
+      "keywords": [
+        "http 411",
+        "411 length required",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 412,
+      "slug": "412-precondition-failed",
+      "pathGuide": "/guides/412-precondition-failed/",
+      "pathStatus": "/status/412/",
+      "title": "HTTP 412 Precondition Failed",
+      "phrase": "Precondition Failed",
+      "iana_name": "Precondition Failed",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 412 Precondition Failed indicates a client errors response outcome.",
+      "meaning": "Precondition Failed describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 412 Precondition Failed"
+      },
+      "related": [
+        411,
+        413
+      ],
+      "aliases": [
+        "412 precondition failed",
+        "http 412"
+      ],
+      "keywords": [
+        "http 412",
+        "412 precondition failed",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 413,
+      "slug": "413-content-too-large",
+      "pathGuide": "/guides/413-content-too-large/",
+      "pathStatus": "/status/413/",
+      "title": "HTTP 413 Content Too Large",
+      "phrase": "Content Too Large",
+      "iana_name": "Content Too Large",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 413 Content Too Large indicates a client errors response outcome.",
+      "meaning": "Content Too Large describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 413 Content Too Large"
+      },
+      "related": [
+        412,
+        414
+      ],
+      "aliases": [
+        "413 content too large",
+        "http 413"
+      ],
+      "keywords": [
+        "http 413",
+        "413 content too large",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 414,
+      "slug": "414-uri-too-long",
+      "pathGuide": "/guides/414-uri-too-long/",
+      "pathStatus": "/status/414/",
+      "title": "HTTP 414 URI Too Long",
+      "phrase": "URI Too Long",
+      "iana_name": "URI Too Long",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 414 URI Too Long indicates a client errors response outcome.",
+      "meaning": "URI Too Long describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 414 URI Too Long"
+      },
+      "related": [
+        413,
+        415
+      ],
+      "aliases": [
+        "414 uri too long",
+        "http 414"
+      ],
+      "keywords": [
+        "http 414",
+        "414 uri too long",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 415,
+      "slug": "415-unsupported-media-type",
+      "pathGuide": "/guides/415-unsupported-media-type/",
+      "pathStatus": "/status/415/",
+      "title": "HTTP 415 Unsupported Media Type",
+      "phrase": "Unsupported Media Type",
+      "iana_name": "Unsupported Media Type",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 415 Unsupported Media Type indicates a client errors response outcome.",
+      "meaning": "Unsupported Media Type describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 415 Unsupported Media Type"
+      },
+      "related": [
+        414,
+        416
+      ],
+      "aliases": [
+        "415 unsupported media type",
+        "http 415"
+      ],
+      "keywords": [
+        "http 415",
+        "415 unsupported media type",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 416,
+      "slug": "416-range-not-satisfiable",
+      "pathGuide": "/guides/416-range-not-satisfiable/",
+      "pathStatus": "/status/416/",
+      "title": "HTTP 416 Range Not Satisfiable",
+      "phrase": "Range Not Satisfiable",
+      "iana_name": "Range Not Satisfiable",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 416 Range Not Satisfiable indicates a client errors response outcome.",
+      "meaning": "Range Not Satisfiable describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 416 Range Not Satisfiable"
+      },
+      "related": [
+        415,
+        417
+      ],
+      "aliases": [
+        "416 range not satisfiable",
+        "http 416"
+      ],
+      "keywords": [
+        "http 416",
+        "416 range not satisfiable",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 417,
+      "slug": "417-expectation-failed",
+      "pathGuide": "/guides/417-expectation-failed/",
+      "pathStatus": "/status/417/",
+      "title": "HTTP 417 Expectation Failed",
+      "phrase": "Expectation Failed",
+      "iana_name": "Expectation Failed",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 417 Expectation Failed indicates a client errors response outcome.",
+      "meaning": "Expectation Failed describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 417 Expectation Failed"
+      },
+      "related": [
+        416,
+        418
+      ],
+      "aliases": [
+        "417 expectation failed",
+        "http 417"
+      ],
+      "keywords": [
+        "http 417",
+        "417 expectation failed",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 418,
+      "slug": "418-unknown",
+      "pathGuide": "/guides/418-unknown/",
+      "pathStatus": "/status/418/",
+      "title": "HTTP 418 Unused",
+      "phrase": "Unused",
+      "iana_name": "Unused",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 418 is reserved/unused and should not be emitted by modern applications.",
+      "meaning": "This status code is reserved for historical use and should not be relied upon in modern implementations.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 418 Unused"
+      },
+      "related": [
+        417
+      ],
+      "aliases": [
+        "418 unused",
+        "http 418"
+      ],
+      "keywords": [
+        "http 418",
+        "418 unused",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "Marked as unused/reserved in modern HTTP usage.",
+      "rfc": "RFC 9110",
+      "status": "unused"
+    },
+    {
+      "code": 421,
+      "slug": "421-misdirected-request",
+      "pathGuide": "/guides/421-misdirected-request/",
+      "pathStatus": "/status/421/",
+      "title": "HTTP 421 Misdirected Request",
+      "phrase": "Misdirected Request",
+      "iana_name": "Misdirected Request",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 421 Misdirected Request indicates a client errors response outcome.",
+      "meaning": "Misdirected Request describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 421 Misdirected Request"
+      },
+      "related": [
+        422
+      ],
+      "aliases": [
+        "421 misdirected request",
+        "http 421"
+      ],
+      "keywords": [
+        "http 421",
+        "421 misdirected request",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 422,
+      "slug": "422-unprocessable-content",
+      "pathGuide": "/guides/422-unprocessable-content/",
+      "pathStatus": "/status/422/",
+      "title": "HTTP 422 Unprocessable Content",
+      "phrase": "Unprocessable Content",
+      "iana_name": "Unprocessable Content",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 422 Unprocessable Content indicates a client errors response outcome.",
+      "meaning": "Unprocessable Content describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 422 Unprocessable Content"
+      },
+      "related": [
+        421,
+        423
+      ],
+      "aliases": [
+        "422 unprocessable content",
+        "http 422"
+      ],
+      "keywords": [
+        "http 422",
+        "422 unprocessable content",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 423,
+      "slug": "423-locked",
+      "pathGuide": "/guides/423-locked/",
+      "pathStatus": "/status/423/",
+      "title": "HTTP 423 Locked",
+      "phrase": "Locked",
+      "iana_name": "Locked",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 423 Locked indicates a client errors response outcome.",
+      "meaning": "Locked describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 423 Locked"
+      },
+      "related": [
+        422,
+        424
+      ],
+      "aliases": [
+        "423 locked",
+        "http 423"
+      ],
+      "keywords": [
+        "http 423",
+        "423 locked",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 424,
+      "slug": "424-failed-dependency",
+      "pathGuide": "/guides/424-failed-dependency/",
+      "pathStatus": "/status/424/",
+      "title": "HTTP 424 Failed Dependency",
+      "phrase": "Failed Dependency",
+      "iana_name": "Failed Dependency",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 424 Failed Dependency indicates a client errors response outcome.",
+      "meaning": "Failed Dependency describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 424 Failed Dependency"
+      },
+      "related": [
+        423,
+        425
+      ],
+      "aliases": [
+        "424 failed dependency",
+        "http 424"
+      ],
+      "keywords": [
+        "http 424",
+        "424 failed dependency",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 425,
+      "slug": "425-too-early",
+      "pathGuide": "/guides/425-too-early/",
+      "pathStatus": "/status/425/",
+      "title": "HTTP 425 Too Early",
+      "phrase": "Too Early",
+      "iana_name": "Too Early",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 425 Too Early indicates a client errors response outcome.",
+      "meaning": "Too Early describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 425 Too Early"
+      },
+      "related": [
+        424,
+        426
+      ],
+      "aliases": [
+        "425 too early",
+        "http 425"
+      ],
+      "keywords": [
+        "http 425",
+        "425 too early",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 426,
+      "slug": "426-upgrade-required",
+      "pathGuide": "/guides/426-upgrade-required/",
+      "pathStatus": "/status/426/",
+      "title": "HTTP 426 Upgrade Required",
+      "phrase": "Upgrade Required",
+      "iana_name": "Upgrade Required",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 426 Upgrade Required indicates a client errors response outcome.",
+      "meaning": "Upgrade Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 426 Upgrade Required"
+      },
+      "related": [
+        425,
+        427
+      ],
+      "aliases": [
+        "426 upgrade required",
+        "http 426"
+      ],
+      "keywords": [
+        "http 426",
+        "426 upgrade required",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 427,
+      "slug": "427-unassigned",
+      "pathGuide": "/guides/427-unassigned/",
+      "pathStatus": "/status/427/",
+      "title": "HTTP 427 Unassigned",
+      "phrase": "Unassigned",
+      "iana_name": "Unassigned",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 427 Unassigned indicates a client errors response outcome.",
+      "meaning": "This status code value is currently unassigned in the IANA registry and should not be used in production APIs.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 427 Unassigned"
+      },
+      "related": [
+        426,
+        428
+      ],
+      "aliases": [
+        "427 unassigned",
+        "http 427"
+      ],
+      "keywords": [
+        "http 427",
+        "427 unassigned",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": false,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "unassigned"
+    },
+    {
+      "code": 428,
+      "slug": "428-precondition-required",
+      "pathGuide": "/guides/428-precondition-required/",
+      "pathStatus": "/status/428/",
+      "title": "HTTP 428 Precondition Required",
+      "phrase": "Precondition Required",
+      "iana_name": "Precondition Required",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 428 Precondition Required indicates a client errors response outcome.",
+      "meaning": "Precondition Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 428 Precondition Required"
+      },
+      "related": [
+        427,
+        429
+      ],
+      "aliases": [
+        "428 precondition required",
+        "http 428"
+      ],
+      "keywords": [
+        "http 428",
+        "428 precondition required",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 429,
+      "slug": "429-too-many-requests",
+      "pathGuide": "/guides/429-too-many-requests/",
+      "pathStatus": "/status/429/",
+      "title": "HTTP 429 Too Many Requests",
+      "phrase": "Too Many Requests",
+      "iana_name": "Too Many Requests",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 429 Too Many Requests indicates a client errors response outcome.",
+      "meaning": "Too Many Requests describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 429 Too Many Requests"
+      },
+      "related": [
+        428,
+        430
+      ],
+      "aliases": [
+        "429 too many requests",
+        "http 429"
+      ],
+      "keywords": [
+        "http 429",
+        "429 too many requests",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 430,
+      "slug": "430-unassigned",
+      "pathGuide": "/guides/430-unassigned/",
+      "pathStatus": "/status/430/",
+      "title": "HTTP 430 Unassigned",
+      "phrase": "Unassigned",
+      "iana_name": "Unassigned",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 430 Unassigned indicates a client errors response outcome.",
+      "meaning": "This status code value is currently unassigned in the IANA registry and should not be used in production APIs.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 430 Unassigned"
+      },
+      "related": [
+        429,
+        431
+      ],
+      "aliases": [
+        "430 unassigned",
+        "http 430"
+      ],
+      "keywords": [
+        "http 430",
+        "430 unassigned",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": false,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "unassigned"
+    },
+    {
+      "code": 431,
+      "slug": "431-request-header-fields-too-large",
+      "pathGuide": "/guides/431-request-header-fields-too-large/",
+      "pathStatus": "/status/431/",
+      "title": "HTTP 431 Request Header Fields Too Large",
+      "phrase": "Request Header Fields Too Large",
+      "iana_name": "Request Header Fields Too Large",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 431 Request Header Fields Too Large indicates a client errors response outcome.",
+      "meaning": "Request Header Fields Too Large describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 431 Request Header Fields Too Large"
+      },
+      "related": [
+        430
+      ],
+      "aliases": [
+        "431 request header fields too large",
+        "http 431"
+      ],
+      "keywords": [
+        "http 431",
+        "431 request header fields too large",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 451,
+      "slug": "451-unavailable-for-legal-reasons",
+      "pathGuide": "/guides/451-unavailable-for-legal-reasons/",
+      "pathStatus": "/status/451/",
+      "title": "HTTP 451 Unavailable For Legal Reasons",
+      "phrase": "Unavailable For Legal Reasons",
+      "iana_name": "Unavailable For Legal Reasons",
+      "category": "4xx",
+      "class": "client-errors",
+      "summary": "HTTP 451 Unavailable For Legal Reasons indicates a client errors response outcome.",
+      "meaning": "Unavailable For Legal Reasons describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Malformed request format",
+        "Authentication or authorization mismatch",
+        "Missing resource or route"
+      ],
+      "fixes": [
+        "Validate request URL, method, and headers",
+        "Fix authentication/authorization flow",
+        "Correct client payload and retry"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 451 Unavailable For Legal Reasons"
+      },
+      "related": [],
+      "aliases": [
+        "451 unavailable for legal reasons",
+        "http 451"
+      ],
+      "keywords": [
+        "http 451",
+        "451 unavailable for legal reasons",
+        "client errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 500,
+      "slug": "500-internal-server-error",
+      "pathGuide": "/guides/500-internal-server-error/",
+      "pathStatus": "/status/500/",
+      "title": "HTTP 500 Internal Server Error",
+      "phrase": "Internal Server Error",
+      "iana_name": "Internal Server Error",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 500 Internal Server Error indicates a server errors response outcome.",
+      "meaning": "Internal Server Error describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled exception",
+        "Application crash",
+        "Misconfiguration",
+        "Dependency failure"
+      ],
+      "fixes": [
+        "Check server logs",
+        "Inspect recent deploys",
+        "Validate environment variables",
+        "Verify upstream services"
+      ],
+      "examples": {
+        "request": "GET /api/data HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 500 Internal Server Error\nContent-Type: application/json"
+      },
+      "related": [
+        502,
+        503,
+        504
+      ],
+      "aliases": [
+        "500 internal server error",
+        "http 500"
+      ],
+      "keywords": [
+        "http 500",
+        "500 internal server error",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 501,
+      "slug": "501-not-implemented",
+      "pathGuide": "/guides/501-not-implemented/",
+      "pathStatus": "/status/501/",
+      "title": "HTTP 501 Not Implemented",
+      "phrase": "Not Implemented",
+      "iana_name": "Not Implemented",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 501 Not Implemented indicates a server errors response outcome.",
+      "meaning": "Not Implemented describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 501 Not Implemented"
+      },
+      "related": [
+        500,
+        502
+      ],
+      "aliases": [
+        "501 not implemented",
+        "http 501"
+      ],
+      "keywords": [
+        "http 501",
+        "501 not implemented",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 502,
+      "slug": "502-bad-gateway",
+      "pathGuide": "/guides/502-bad-gateway/",
+      "pathStatus": "/status/502/",
+      "title": "HTTP 502 Bad Gateway",
+      "phrase": "Bad Gateway",
+      "iana_name": "Bad Gateway",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 502 Bad Gateway indicates a server errors response outcome.",
+      "meaning": "Bad Gateway describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 502 Bad Gateway"
+      },
+      "related": [
+        501,
+        503
+      ],
+      "aliases": [
+        "502 bad gateway",
+        "http 502"
+      ],
+      "keywords": [
+        "http 502",
+        "502 bad gateway",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 503,
+      "slug": "503-service-unavailable",
+      "pathGuide": "/guides/503-service-unavailable/",
+      "pathStatus": "/status/503/",
+      "title": "HTTP 503 Service Unavailable",
+      "phrase": "Service Unavailable",
+      "iana_name": "Service Unavailable",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 503 Service Unavailable indicates a server errors response outcome.",
+      "meaning": "Service Unavailable describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 503 Service Unavailable"
+      },
+      "related": [
+        502,
+        504
+      ],
+      "aliases": [
+        "503 service unavailable",
+        "http 503"
+      ],
+      "keywords": [
+        "http 503",
+        "503 service unavailable",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 504,
+      "slug": "504-gateway-timeout",
+      "pathGuide": "/guides/504-gateway-timeout/",
+      "pathStatus": "/status/504/",
+      "title": "HTTP 504 Gateway Timeout",
+      "phrase": "Gateway Timeout",
+      "iana_name": "Gateway Timeout",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 504 Gateway Timeout indicates a server errors response outcome.",
+      "meaning": "Gateway Timeout describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 504 Gateway Timeout"
+      },
+      "related": [
+        503,
+        505
+      ],
+      "aliases": [
+        "504 gateway timeout",
+        "http 504"
+      ],
+      "keywords": [
+        "http 504",
+        "504 gateway timeout",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 505,
+      "slug": "505-http-version-not-supported",
+      "pathGuide": "/guides/505-http-version-not-supported/",
+      "pathStatus": "/status/505/",
+      "title": "HTTP 505 HTTP Version Not Supported",
+      "phrase": "HTTP Version Not Supported",
+      "iana_name": "HTTP Version Not Supported",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 505 HTTP Version Not Supported indicates a server errors response outcome.",
+      "meaning": "HTTP Version Not Supported describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 505 HTTP Version Not Supported"
+      },
+      "related": [
+        504,
+        506
+      ],
+      "aliases": [
+        "505 http version not supported",
+        "http 505"
+      ],
+      "keywords": [
+        "http 505",
+        "505 http version not supported",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 506,
+      "slug": "506-variant-also-negotiates",
+      "pathGuide": "/guides/506-variant-also-negotiates/",
+      "pathStatus": "/status/506/",
+      "title": "HTTP 506 Variant Also Negotiates",
+      "phrase": "Variant Also Negotiates",
+      "iana_name": "Variant Also Negotiates",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 506 Variant Also Negotiates indicates a server errors response outcome.",
+      "meaning": "Variant Also Negotiates describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 506 Variant Also Negotiates"
+      },
+      "related": [
+        505,
+        507
+      ],
+      "aliases": [
+        "506 variant also negotiates",
+        "http 506"
+      ],
+      "keywords": [
+        "http 506",
+        "506 variant also negotiates",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 507,
+      "slug": "507-insufficient-storage",
+      "pathGuide": "/guides/507-insufficient-storage/",
+      "pathStatus": "/status/507/",
+      "title": "HTTP 507 Insufficient Storage",
+      "phrase": "Insufficient Storage",
+      "iana_name": "Insufficient Storage",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 507 Insufficient Storage indicates a server errors response outcome.",
+      "meaning": "Insufficient Storage describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 507 Insufficient Storage"
+      },
+      "related": [
+        506,
+        508
+      ],
+      "aliases": [
+        "507 insufficient storage",
+        "http 507"
+      ],
+      "keywords": [
+        "http 507",
+        "507 insufficient storage",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 508,
+      "slug": "508-loop-detected",
+      "pathGuide": "/guides/508-loop-detected/",
+      "pathStatus": "/status/508/",
+      "title": "HTTP 508 Loop Detected",
+      "phrase": "Loop Detected",
+      "iana_name": "Loop Detected",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 508 Loop Detected indicates a server errors response outcome.",
+      "meaning": "Loop Detected describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 508 Loop Detected"
+      },
+      "related": [
+        507,
+        509
+      ],
+      "aliases": [
+        "508 loop detected",
+        "http 508"
+      ],
+      "keywords": [
+        "http 508",
+        "508 loop detected",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 509,
+      "slug": "509-unassigned",
+      "pathGuide": "/guides/509-unassigned/",
+      "pathStatus": "/status/509/",
+      "title": "HTTP 509 Unassigned",
+      "phrase": "Unassigned",
+      "iana_name": "Unassigned",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 509 Unassigned indicates a server errors response outcome.",
+      "meaning": "This status code value is currently unassigned in the IANA registry and should not be used in production APIs.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 509 Unassigned"
+      },
+      "related": [
+        508,
+        510
+      ],
+      "aliases": [
+        "509 unassigned",
+        "http 509"
+      ],
+      "keywords": [
+        "http 509",
+        "509 unassigned",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": false,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "unassigned"
+    },
+    {
+      "code": 510,
+      "slug": "510-not-extended",
+      "pathGuide": "/guides/510-not-extended/",
+      "pathStatus": "/status/510/",
+      "title": "HTTP 510 Not Extended",
+      "phrase": "Not Extended",
+      "iana_name": "Not Extended",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 510 Not Extended indicates a server errors response outcome.",
+      "meaning": "Not Extended describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 510 Not Extended"
+      },
+      "related": [
+        509,
+        511
+      ],
+      "aliases": [
+        "510 not extended",
+        "http 510"
+      ],
+      "keywords": [
+        "http 510",
+        "510 not extended",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    },
+    {
+      "code": 511,
+      "slug": "511-network-authentication-required",
+      "pathGuide": "/guides/511-network-authentication-required/",
+      "pathStatus": "/status/511/",
+      "title": "HTTP 511 Network Authentication Required",
+      "phrase": "Network Authentication Required",
+      "iana_name": "Network Authentication Required",
+      "category": "5xx",
+      "class": "server-errors",
+      "summary": "HTTP 511 Network Authentication Required indicates a server errors response outcome.",
+      "meaning": "Network Authentication Required describes how the server processed the request and what the client should do next.",
+      "causes": [
+        "Unhandled server-side exception",
+        "Upstream service failure",
+        "Runtime configuration issue"
+      ],
+      "fixes": [
+        "Review application and proxy logs",
+        "Rollback or patch unstable deployments",
+        "Check upstream dependencies and timeouts"
+      ],
+      "examples": {
+        "request": "GET /example HTTP/1.1\nHost: errorlookup.com",
+        "response": "HTTP/1.1 511 Network Authentication Required"
+      },
+      "related": [
+        510
+      ],
+      "aliases": [
+        "511 network authentication required",
+        "http 511"
+      ],
+      "keywords": [
+        "http 511",
+        "511 network authentication required",
+        "server errors status codes"
+      ],
+      "compare": [],
+      "faq": [],
+      "indexable": true,
+      "official": true,
+      "notes": "",
+      "rfc": "RFC 9110",
+      "status": "assigned"
+    }
+  ]
+}
