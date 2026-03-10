@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTTP Status Codes</title>
+  <meta name="description" content="HTTP Status Codes">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+      color: #111;
+    }
+    a { color: #0a58ca; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, pre {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      padding: 16px;
+      overflow-x: auto;
+    }
+    h1, h2 { line-height: 1.2; }
+    ul { padding-left: 20px; }
+    .muted { color: #666; }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    nav a {
+      margin-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/status-codes/">All Status Codes</a>
+    <a href="/common/client-errors/">4xx</a>
+    <a href="/common/server-errors/">5xx</a>
+    <a href="/common/redirect-codes/">3xx</a>
+  </nav>
+  
+<h1>HTTP Status Codes</h1>
+<ul>
+<li><a href="/status/100/">HTTP 100 Continue</a></li>
+<li><a href="/status/101/">HTTP 101 Switching Protocols</a></li>
+<li><a href="/status/102/">HTTP 102 Processing</a></li>
+<li><a href="/status/103/">HTTP 103 Early Hints</a></li>
+<li><a href="/status/104/">HTTP 104 Upload Resumption Supported (TEMPORARY - registered 2024-11-13, extension registered 2025-09-15, expires 2026-11-13)</a></li>
+<li><a href="/status/200/">HTTP 200 OK</a></li>
+<li><a href="/status/201/">HTTP 201 Created</a></li>
+<li><a href="/status/202/">HTTP 202 Accepted</a></li>
+<li><a href="/status/203/">HTTP 203 Non-Authoritative Information</a></li>
+<li><a href="/status/204/">HTTP 204 No Content</a></li>
+<li><a href="/status/205/">HTTP 205 Reset Content</a></li>
+<li><a href="/status/206/">HTTP 206 Partial Content</a></li>
+<li><a href="/status/207/">HTTP 207 Multi-Status</a></li>
+<li><a href="/status/208/">HTTP 208 Already Reported</a></li>
+<li><a href="/status/226/">HTTP 226 IM Used</a></li>
+<li><a href="/status/300/">HTTP 300 Multiple Choices</a></li>
+<li><a href="/status/301/">HTTP 301 Moved Permanently</a></li>
+<li><a href="/status/302/">HTTP 302 Found</a></li>
+<li><a href="/status/303/">HTTP 303 See Other</a></li>
+<li><a href="/status/304/">HTTP 304 Not Modified</a></li>
+<li><a href="/status/305/">HTTP 305 Use Proxy</a></li>
+<li><a href="/status/306/">HTTP 306 (Unused)</a></li>
+<li><a href="/status/307/">HTTP 307 Temporary Redirect</a></li>
+<li><a href="/status/308/">HTTP 308 Permanent Redirect</a></li>
+<li><a href="/status/400/">HTTP 400 Bad Request</a></li>
+<li><a href="/status/401/">HTTP 401 Unauthorized</a></li>
+<li><a href="/status/402/">HTTP 402 Payment Required</a></li>
+<li><a href="/status/403/">HTTP 403 Forbidden</a></li>
+<li><a href="/status/404/">HTTP 404 Not Found</a></li>
+<li><a href="/status/405/">HTTP 405 Method Not Allowed</a></li>
+<li><a href="/status/406/">HTTP 406 Not Acceptable</a></li>
+<li><a href="/status/407/">HTTP 407 Proxy Authentication Required</a></li>
+<li><a href="/status/408/">HTTP 408 Request Timeout</a></li>
+<li><a href="/status/409/">HTTP 409 Conflict</a></li>
+<li><a href="/status/410/">HTTP 410 Gone</a></li>
+<li><a href="/status/411/">HTTP 411 Length Required</a></li>
+<li><a href="/status/412/">HTTP 412 Precondition Failed</a></li>
+<li><a href="/status/413/">HTTP 413 Content Too Large</a></li>
+<li><a href="/status/414/">HTTP 414 URI Too Long</a></li>
+<li><a href="/status/415/">HTTP 415 Unsupported Media Type</a></li>
+<li><a href="/status/416/">HTTP 416 Range Not Satisfiable</a></li>
+<li><a href="/status/417/">HTTP 417 Expectation Failed</a></li>
+<li><a href="/status/418/">HTTP 418 (Unused)</a></li>
+<li><a href="/status/421/">HTTP 421 Misdirected Request</a></li>
+<li><a href="/status/422/">HTTP 422 Unprocessable Content</a></li>
+<li><a href="/status/423/">HTTP 423 Locked</a></li>
+<li><a href="/status/424/">HTTP 424 Failed Dependency</a></li>
+<li><a href="/status/425/">HTTP 425 Too Early</a></li>
+<li><a href="/status/426/">HTTP 426 Upgrade Required</a></li>
+<li><a href="/status/427/">HTTP 427 Unassigned</a></li>
+<li><a href="/status/428/">HTTP 428 Precondition Required</a></li>
+<li><a href="/status/429/">HTTP 429 Too Many Requests</a></li>
+<li><a href="/status/430/">HTTP 430 Unassigned</a></li>
+<li><a href="/status/431/">HTTP 431 Request Header Fields Too Large</a></li>
+<li><a href="/status/451/">HTTP 451 Unavailable For Legal Reasons</a></li>
+<li><a href="/status/500/">HTTP 500 Internal Server Error</a></li>
+<li><a href="/status/501/">HTTP 501 Not Implemented</a></li>
+<li><a href="/status/502/">HTTP 502 Bad Gateway</a></li>
+<li><a href="/status/503/">HTTP 503 Service Unavailable</a></li>
+<li><a href="/status/504/">HTTP 504 Gateway Timeout</a></li>
+<li><a href="/status/505/">HTTP 505 HTTP Version Not Supported</a></li>
+<li><a href="/status/506/">HTTP 506 Variant Also Negotiates</a></li>
+<li><a href="/status/507/">HTTP 507 Insufficient Storage</a></li>
+<li><a href="/status/508/">HTTP 508 Loop Detected</a></li>
+<li><a href="/status/509/">HTTP 509 Unassigned</a></li>
+<li><a href="/status/510/">HTTP 510 Not Extended (OBSOLETED)</a></li>
+<li><a href="/status/511/">HTTP 511 Network Authentication Required</a></li>
+</ul>
+
+</body>
+</html>

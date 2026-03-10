@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTTP 407 Proxy Authentication Required</title>
+  <meta name="description" content="HTTP 407 Proxy Authentication Required">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 16px;
+      line-height: 1.6;
+      color: #111;
+    }
+    a { color: #0a58ca; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code, pre {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    pre {
+      padding: 16px;
+      overflow-x: auto;
+    }
+    h1, h2 { line-height: 1.2; }
+    ul { padding-left: 20px; }
+    .muted { color: #666; }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    nav a {
+      margin-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/status-codes/">All Status Codes</a>
+    <a href="/common/client-errors/">4xx</a>
+    <a href="/common/server-errors/">5xx</a>
+    <a href="/common/redirect-codes/">3xx</a>
+  </nav>
+  
+<h1>HTTP 407 Proxy Authentication Required</h1>
+<p class="muted">Category: Client Errors</p>
+
+<div class="card">
+  <h2>Definition</h2>
+  <p>Proxy Authentication Required</p>
+</div>
+
+<div class="card">
+  <h2>Reference</h2>
+  <p>[RFC9110, Section 15.5.8]</p>
+</div>
+
+<div class="card">
+  <h2>Example Response</h2>
+  <pre>HTTP/1.1 407 Proxy Authentication Required
+Content-Type: text/html</pre>
+</div>
+
+<p><a href="/guides/407-proxy-authentication-required/">Read guide for HTTP 407 Proxy Authentication Required</a></p>
+
+</body>
+</html>
