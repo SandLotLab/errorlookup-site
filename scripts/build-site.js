@@ -80,12 +80,15 @@ function makeCodeEntry(raw) {
   const cls = Math.floor(code / 100);
   const meta = CLASS_META[cls];
   const phrase = toPhrase(raw.title);
-  const slug = slugByCode.get(code) || `${code}-${phrase.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+  const normalizedSlug = String(raw.slug || '').replace('-unknown', '-unused');
+  const slug = normalizedSlug || slugByCode.get(code) || `${code}-${phrase.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
   const status = statusFlag(raw.title);
   const title = `HTTP ${code} ${phrase || raw.title}`.trim();
 
   const summary = status === 'unused'
     ? `HTTP ${code} is reserved/unused and should not be emitted by modern applications.`
+    : status === 'unassigned'
+      ? `HTTP ${code} is currently unassigned in the IANA registry and should not be emitted by modern applications.`
     : `HTTP ${code} ${phrase} indicates a ${meta.label.toLowerCase()} response outcome.`;
 
   const meaning = status === 'unused'
@@ -172,6 +175,8 @@ function makeCodeEntry(raw) {
   if (code === 306) {
     entry.title = 'HTTP 306 Unused';
     entry.phrase = 'Unused';
+    entry.slug = '306-unused';
+    entry.pathGuide = '/guides/306-unused/';
     entry.iana_name = '(Unused)';
     entry.summary = 'This code is unused and reserved in historical context.';
     entry.meaning = 'Do not rely on this code in modern implementations.';
@@ -180,6 +185,17 @@ function makeCodeEntry(raw) {
     entry.examples = { request: '', response: '' };
     entry.related = [301, 302, 307, 308];
     entry.notes = 'Mark clearly as unused.';
+    entry.status = 'unused';
+  }
+
+  if (code === 418) {
+    entry.title = 'HTTP 418 Unused';
+    entry.phrase = 'Unused';
+    entry.slug = '418-unused';
+    entry.pathGuide = '/guides/418-unused/';
+    entry.iana_name = '(Unused)';
+    entry.summary = 'HTTP 418 is unused in the IANA registry and should not be emitted by modern applications.';
+    entry.meaning = 'This status code value is marked as unused and should not be used in normal modern implementations.';
     entry.status = 'unused';
   }
 
