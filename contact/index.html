@@ -26,28 +26,8 @@
   <script defer src="/assets/js/site.js"></script>
 </head>
 <body>
-  <header class="site-header">
-  <div class="container header-inner">
-    <a class="header-logo" href="/" aria-label="ErrorLookup homepage">
-      <img src="/assets/logo.png" alt="ErrorLookup logo" width="180" height="44">
-    </a>
-
-    <nav class="primary-nav" aria-label="Primary">
-      <ul class="nav-list">
-        <li><a href="/status-codes/">Status Codes</a></li>
-        <li><a href="/common/client-errors/">Client Errors</a></li>
-        <li><a href="/common/server-errors/">Server Errors</a></li>
-        <li><a href="/common/redirect-codes/">Redirects</a></li>
-        <li><a href="/compare/301-vs-302/">Comparisons</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-actions">
-      <a class="fuel-link" href="https://onlinedevtools.app/infrastructure" rel="noopener noreferrer">Fuel The Infrastructure</a>
-      <button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle dark mode">🌓</button>
-    </div>
-  </div>
-</header>
+<div data-include="/partials/header.html"></div>
+  
   <main class="container">
     <section class="section">
       <h1>Contact ErrorLookup</h1>
@@ -80,23 +60,8 @@
       <p>For privacy questions or requests related to personal data, contact <a href="mailto:privacy@onlinedevtools.app">privacy@onlinedevtools.app</a>. You can review our handling practices in the <a href="/privacy/">Privacy Policy</a> and usage terms in our <a href="/terms/">Terms</a>.</p>
     </section>
   </main>
-  <footer class="site-footer">
-  <div class="container footer-main">
-    <div class="footer-logo">
-      <img src="/assets/logo.png" alt="ErrorLookup logo">
-    </div>
-
-    <p class="footer-copy">© 2026 errorlookup.com</p>
-    <ul class="footer-meta-links" aria-label="Footer">
-      <li><a href="/status-codes/">Status Codes</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/privacy/">Privacy</a></li>
-      <li><a href="/contact/">Contact</a></li>
-      <li><a href="/terms/">Terms</a></li>
-    </ul>
-  </div>
-  <p class="footer-signature" aria-hidden="true">// Beware of The Old Soldier</p>
-</footer>
+  
+<div data-include="/partials/footer.html"></div>
 </body>
 </html>
 
