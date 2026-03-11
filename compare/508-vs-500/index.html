@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7167291111213614" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-75H3P692GN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date());
+  gtag('config', 'G-75H3P692GN');
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>508 vs 500 – Loop Detected vs Internal Server Error | ErrorLookup</title>
+  <meta name="description" content="Compare HTTP 508 (Loop Detected) vs 500 (Internal Server Error): semantics, caching behavior, SEO implications, API impact, and implementation mistakes to avoid.">
+  <link rel="canonical" href="https://errorlookup.com/compare/508-vs-500/">
+  <meta property="og:title" content="508 vs 500 – Loop Detected vs Internal Server Error | ErrorLookup">
+  <meta property="og:description" content="Compare HTTP 508 (Loop Detected) vs 500 (Internal Server Error): semantics, caching behavior, SEO implications, API impact, and implementation mistakes to avoid.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://errorlookup.com/compare/508-vs-500/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="508 vs 500 – Loop Detected vs Internal Server Error | ErrorLookup">
+  <meta name="twitter:description" content="Compare HTTP 508 (Loop Detected) vs 500 (Internal Server Error): semantics, caching behavior, SEO implications, API impact, and implementation mistakes to avoid.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://errorlookup.com/"},{"@type":"ListItem","position":2,"name":"Compare","item":"https://errorlookup.com/compare/"},{"@type":"ListItem","position":3,"name":"508 vs 500","item":"https://errorlookup.com/compare/508-vs-500/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the biggest difference between 508 and 500?","acceptedAnswer":{"@type":"Answer","text":"508 communicates Loop Detected, while 500 communicates Internal Server Error. Choosing the right one keeps clients and intermediaries predictable."}},{"@type":"Question","name":"Do 508 and 500 have SEO or caching impact?","acceptedAnswer":{"@type":"Answer","text":"Yes. Search engines and caches interpret status classes differently. Use each code according to its semantics to avoid accidental indexing, stale responses, or crawl inefficiency."}},{"@type":"Question","name":"Can APIs safely return 508 instead of 500?","acceptedAnswer":{"@type":"Answer","text":"Only when it matches contract semantics. API clients often branch logic by exact code, so swapping them can break retries, auth handling, or user-facing errors."}}]}</script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/search.js"></script>
+</head>
+<body>
+  <header class="site-header">
+  <div class="container header-inner">
+    <a class="header-logo" href="/" aria-label="ErrorLookup homepage">
+      <img src="/assets/logo.png" alt="ErrorLookup logo" width="180" height="44">
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/status-codes/">Status Codes</a></li>
+        <li><a href="/common/client-errors/">Client Errors</a></li>
+        <li><a href="/common/server-errors/">Server Errors</a></li>
+        <li><a href="/common/redirect-codes/">Redirects</a></li>
+        <li><a href="/compare/301-vs-302/">Comparisons</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a class="fuel-link" href="https://onlinedevtools.app/infrastructure" rel="noopener noreferrer">Fuel The Infrastructure</a>
+      <button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle dark mode">🌓</button>
+    </div>
+  </div>
+</header>
+  <main class="container"><nav class="breadcrumbs" data-breadcrumbs></nav>
+    <h1>508 vs 500: Loop Detected vs Internal Server Error</h1>
+    <p>508 and 500 can look similar in logs, but they tell clients, crawlers, and API consumers different things.</p>
+    <div class="table-wrap"><table><thead><tr><th>Aspect</th><th>508</th><th>500</th></tr></thead><tbody>
+      <tr><td>Meaning</td><td>Loop Detected describes how the server processed the request and what the client should do next.</td><td>Internal Server Error describes how the server processed the request and what the client should do next.</td></tr>
+      <tr><td>Typical use case</td><td>HTTP 508 Loop Detected indicates a server errors response outcome.</td><td>HTTP 500 Internal Server Error indicates a server errors response outcome.</td></tr>
+      <tr><td>Caching/client behavior</td><td>Check cache headers and downstream behavior for 508.</td><td>Check cache headers and downstream behavior for 500.</td></tr>
+      <tr><td>SEO implications</td><td>Search crawlers interpret 508 according to server-errors semantics.</td><td>Search crawlers interpret 500 according to server-errors semantics.</td></tr>
+      <tr><td>API/backend impact</td><td>API clients may branch logic specifically on 508.</td><td>API clients may branch logic specifically on 500.</td></tr>
+    </tbody></table></div>
+    <section class="card"><h2>When to use one vs the other</h2><p>Use 508 when the response should communicate loop detected behavior; use 500 when internal server error is the accurate protocol signal.</p><p>A frequent mistake is swapping 508 and 500 for convenience; that causes client retry bugs, incorrect cache signals, and misleading monitoring data.</p><p>Decision summary: if user agents should receive the Loop Detected signal, return 508; if they should receive Internal Server Error, return 500.</p></section>
+    <section class="card"><h2>FAQ</h2>
+      <h3>What is the biggest difference between 508 and 500?</h3><p>508 communicates Loop Detected, while 500 communicates Internal Server Error. Choosing the right one keeps clients and intermediaries predictable.</p><h3>Do 508 and 500 have SEO or caching impact?</h3><p>Yes. Search engines and caches interpret status classes differently. Use each code according to its semantics to avoid accidental indexing, stale responses, or crawl inefficiency.</p><h3>Can APIs safely return 508 instead of 500?</h3><p>Only when it matches contract semantics. API clients often branch logic by exact code, so swapping them can break retries, auth handling, or user-facing errors.</p>
+    </section>
+    <p>Related guides: <a href="/guides/508-loop-detected/">508 Loop Detected</a> · <a href="/guides/500-internal-server-error/">500 Internal Server Error</a></p>
+    <section class="card"><h2>Related comparisons</h2><ul><li><a href="/compare/500-vs-502/">500 vs 502</a></li><li><a href="/compare/500-vs-503/">500 vs 503</a></li><li><a href="/compare/500-vs-504/">500 vs 504</a></li></ul></section>
+  </main>
+  <footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-logo">
+      <img src="/assets/logo.png" alt="ErrorLookup logo">
+    </div>
+
+    <p class="footer-copy">© 2026 errorlookup.com</p>
+    <ul class="footer-meta-links" aria-label="Footer">
+      <li><a href="/status-codes/">Status Codes</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/terms/">Terms</a></li>
+    </ul>
+  </div>
+  <p class="footer-signature" aria-hidden="true">// Beware of The Old Soldier</p>
+</footer>
+</body>
+</html>

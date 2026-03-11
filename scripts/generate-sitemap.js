@@ -12,14 +12,20 @@ const staticPaths = [
   '/common/redirect-codes/',
   '/common/client-errors/',
   '/common/server-errors/',
-  '/compare/301-vs-302/',
-  '/compare/401-vs-403/',
-  '/compare/403-vs-404/',
+  '/compare/',
   '/about/',
   '/contact/',
   '/privacy/',
   '/terms/'
 ];
+
+
+function listComparisonPaths() {
+  const compareDir = path.join(ROOT, 'compare');
+  return fs.readdirSync(compareDir, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => `/compare/${entry.name}/`);
+}
 
 function loadCodes() {
   const file = path.join(ROOT, 'data', 'codes.json');
@@ -53,7 +59,7 @@ function main() {
 
   const urls = new Map();
 
-  staticPaths.forEach((p) => {
+  [...staticPaths, ...listComparisonPaths()].forEach((p) => {
     const priority = p === '/' ? '1.0' : '0.8';
     urls.set(`${DOMAIN}${p}`, makeUrl(`${DOMAIN}${p}`, priority));
   });
