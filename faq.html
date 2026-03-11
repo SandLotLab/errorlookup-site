@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTTP Status Code FAQ – ErrorLookup</title>
+  <meta name="description" content="Frequently asked questions about HTTP status codes, including the meaning of common codes, differences between similar responses, best practices for SEO, and guidance for developers using the ErrorLookup reference site.">
+  <link rel="canonical" href="https://errorlookup.com/faq.html">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+  <!-- Open Graph metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ErrorLookup">
+  <meta property="og:title" content="HTTP Status Code FAQ – ErrorLookup">
+  <meta property="og:description" content="Find answers to the most common questions about HTTP status codes, including usage guidance, troubleshooting tips and SEO best practices for redirects, client and server errors.">
+  <meta property="og:url" content="https://errorlookup.com/faq/">
+
+  <!-- Twitter metadata -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HTTP Status Code FAQ – ErrorLookup">
+  <meta name="twitter:description" content="Answers to developer questions about HTTP status codes, including comparisons of 301 vs 302, 401 vs 403, troubleshooting advice and more.">
+
+  <!-- AdSense and Analytics -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7167291111213614" crossorigin="anonymous"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75H3P692GN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-75H3P692GN');
+  </script>
+
+  <!-- Structured data for FAQ page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an HTTP status code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An HTTP status code is a three-digit response returned by a server to indicate the outcome of a request. It tells clients whether a request succeeded, redirected, failed due to client input, or encountered a server-side issue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do 1xx informational codes mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1xx codes indicate that the server has received the request and is continuing to process it. They are rarely seen by end users and are primarily used in protocols like HTTP/2 and WebSocket handshakes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between 200 and 201?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "200 OK means the request succeeded and the response body contains the requested representation. 201 Created means the request succeeded and a new resource has been created; the response includes a Location header pointing to the new resource."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I use 301 vs 302 redirects?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a 301 redirect to indicate a permanent move from one URL to another. Search engines will update their indexes to the new URL. Use a 302 redirect to indicate a temporary move; browsers and search engines should continue to request the original URL in future."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does 307 differ from 302?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "302 allows the client to change the HTTP method on redirect (e.g., POST may become GET). 307 Temporary Redirect preserves the original method on redirect; it is preferred when you need a temporary redirect that keeps the request method and body intact."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is 401 Unauthorized different from 403 Forbidden?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "401 indicates that the request lacks valid authentication credentials or the credentials have expired. 403 indicates that the server understood the request and the credentials but refuses to authorize it, often due to insufficient permissions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes a 404 Not Found error?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 404 error occurs when the server cannot find the requested resource. Common causes include broken links, deleted pages, mistyped URLs, or missing route definitions in an application."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I do when I see a 500 Internal Server Error?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 500 error indicates an unexpected server-side condition. Start by checking server logs, application code, and recent deploys. Ensure upstream services and environment variables are healthy. The issue may require developer or operations team intervention."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do status codes affect SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Proper use of status codes helps search engines understand whether content moved, was removed, or is temporarily unavailable. Using the wrong code (e.g., a 302 instead of a 301) can dilute link equity and confuse indexing. Error pages should return 404 or 410 rather than 200."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does 429 Too Many Requests mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "429 means the client has sent too many requests in a given amount of time. It often appears when rate limiting, abuse prevention, or API quotas are in place. Clients should back off and retry after the period specified in the Retry-After header."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is a 301 better for SEO than 302?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 301 redirect signals a permanent move, so search engines transfer ranking signals (link equity) to the new URL. A 302 suggests a temporary move, so search engines continue to index the old URL. When a change is permanent, use 301 to consolidate ranking signals and avoid duplication."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 503 Service Unavailable response?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 503 response indicates that the server is temporarily unable to handle the request due to maintenance or overload. It suggests that the service should be restored soon. Properly configured 503 responses should include a Retry-After header with an estimate of availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I handle a 504 Gateway Timeout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 504 error occurs when a gateway or proxy upstream (e.g., load balancer, API gateway) does not receive a timely response from a backend. Investigate network connectivity, downstream service latency, and resource exhaustion on dependent services."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/theme.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+  <script defer src="/assets/js/search.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="ErrorLookup homepage">ErrorLookup</a>
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="/status-codes/">Status Codes</a></li>
+          <li><a href="/common/client-errors/">Client Errors</a></li>
+          <li><a href="/common/server-errors/">Server Errors</a></li>
+          <li><a href="/common/redirect-codes/">Redirects</a></li>
+          <li><a href="/compare/301-vs-302/">Comparisons</a></li>
+          <li><a href="/faq.html" aria-current="page">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="fuel-link" href="https://onlinedevtools.app/infrastructure" rel="noopener noreferrer">Fuel The Infrastructure</a>
+        <button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle dark mode">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero section">
+      <h1>Frequently Asked Questions about HTTP Status Codes</h1>
+      <p>This page addresses common questions developers have about HTTP response codes. It is organized by topic to help you quickly find the answers you need when debugging APIs, websites, microservices and serverless functions.</p>
+    </section>
+
+    <section class="section">
+      <h2>Basics</h2>
+      <p>HTTP status codes are grouped by class. Each class communicates a high-level outcome for a request. Within classes, individual codes provide additional context.</p>
+      <ul>
+        <li><strong>1xx Informational</strong> – The request was received and the process is continuing.</li>
+        <li><strong>2xx Success</strong> – The request was successfully received, understood, and accepted.</li>
+        <li><strong>3xx Redirection</strong> – Further action needs to be taken by the user agent to fulfill the request.</li>
+        <li><strong>4xx Client Error</strong> – The request contains bad syntax or cannot be fulfilled.</li>
+        <li><strong>5xx Server Error</strong> – The server failed to fulfill an apparently valid request.</li>
+      </ul>
+      <p>To learn about all status codes in each class, visit the <a href="/status-codes/">Status Codes Index</a>.</p>
+    </section>
+
+    <section class="section">
+      <h2>Success Codes</h2>
+      <p>Success codes indicate that the request succeeded. The most common success code is 200 OK. Some other helpful success codes include:</p>
+      <ul>
+        <li><a href="/guides/201-created/">201 Created</a> – Indicates a new resource has been created. The Location header contains the URI of the new resource.</li>
+        <li><a href="/guides/204-no-content/">204 No Content</a> – Indicates the request succeeded but there is no message body in the response.</li>
+        <li><a href="/guides/206-partial-content/">206 Partial Content</a> – Indicates that the server is delivering only part of the resource due to a range header sent by the client.</li>
+      </ul>
+      <p>Success responses may contain data in the body, or they may indicate a resource has been created or modified.</p>
+    </section>
+
+    <section class="section">
+      <h2>Redirection Codes</h2>
+      <p>Redirection codes instruct the client to make a new request to a different URI. Choosing the correct redirect response is important for user experience and SEO.</p>
+      <ul>
+        <li><a href="/guides/301-moved-permanently/">301 Moved Permanently</a> – Use this for a permanent URL change. Search engines will transfer ranking signals to the new URL.</li>
+        <li><a href="/guides/302-found/">302 Found</a> – A temporary redirect. Clients should continue to request the original URI in future.</li>
+        <li><a href="/guides/307-temporary-redirect/">307 Temporary Redirect</a> – Keeps the request method and body intact on redirect. Use for temporary moves in APIs that require method preservation.</li>
+        <li><a href="/guides/308-permanent-redirect/">308 Permanent Redirect</a> – Permanent redirect that also preserves the method and body. Useful when migrating API endpoints.</li>
+      </ul>
+      <p>Improper use of temporary versus permanent redirects can confuse search engines and dilute SEO value. Learn more in our <a href="/compare/301-vs-302/">301 vs 302 comparison guide</a>.</p>
+    </section>
+
+    <section class="section">
+      <h2>Client Error Codes</h2>
+      <p>Client error codes indicate that something is wrong with the request. They signal that the client needs to change or fix the request before it will succeed.</p>
+      <ul>
+        <li><a href="/guides/400-bad-request/">400 Bad Request</a> – The server cannot process the request due to invalid syntax or missing parameters.</li>
+        <li><a href="/guides/401-unauthorized/">401 Unauthorized</a> – The request lacks valid authentication credentials. Clients should authenticate and retry.</li>
+        <li><a href="/guides/403-forbidden/">403 Forbidden</a> – Authentication succeeded but the authenticated client does not have permission to access the resource.</li>
+        <li><a href="/guides/404-not-found/">404 Not Found</a> – The requested resource cannot be found. Double-check the URL or confirm if the resource has moved.</li>
+        <li><a href="/guides/429-too-many-requests/">429 Too Many Requests</a> – The client has sent too many requests in a given amount of time and should slow down or back off.</li>
+      </ul>
+      <p>When a client error occurs, inspect the request method, URL, headers, and body for mistakes. Verify authentication and authorization, and check API documentation for parameter requirements.</p>
+    </section>
+
+    <section class="section">
+      <h2>Server Error Codes</h2>
+      <p>Server error codes indicate that the server encountered an error processing a valid request. These errors are usually due to application logic, server misconfiguration, or issues with upstream dependencies.</p>
+      <ul>
+        <li><a href="/guides/500-internal-server-error/">500 Internal Server Error</a> – A generic error when the server fails to process a request unexpectedly. Check logs and upstream dependencies.</li>
+        <li><a href="/guides/502-bad-gateway/">502 Bad Gateway</a> – A gateway or proxy received an invalid response from an upstream server. Investigate load balancers and backend services.</li>
+        <li><a href="/guides/503-service-unavailable/">503 Service Unavailable</a> – The server is temporarily unable to handle the request due to overload or maintenance. Proper responses should include a Retry-After header.</li>
+        <li><a href="/guides/504-gateway-timeout/">504 Gateway Timeout</a> – A gateway or proxy did not receive a timely response from an upstream server. Check network connectivity and service latency.</li>
+      </ul>
+      <p>Server errors should be logged and monitored. Consider implementing error tracking, circuit breakers, and graceful degradation to improve resilience.</p>
+    </section>
+
+    <section class="section">
+      <h2>SEO and Error Pages</h2>
+      <p>Serving the correct status code is essential for search engines to index content properly. Here are a few best practices:</p>
+      <ul>
+        <li>Return a 404 or 410 response for missing content rather than a 200 page with a custom message.</li>
+        <li>Use 301 redirects when moving content permanently. This passes ranking signals to the new URL.</li>
+        <li>Use 302 or 307 redirects for temporary changes, such as A/B testing or short-lived campaigns.</li>
+        <li>Monitor logs for recurring 4xx or 5xx errors, and fix broken links or misconfigured routes promptly.</li>
+        <li>In API design, choose status codes that accurately reflect the outcome of each request. Incorrect status codes can confuse clients and lead to poor developer experience.</li>
+      </ul>
+      <p>For more details on best practices, read our <a href="/guides/301-moved-permanently/">301 Moved Permanently guide</a> and our <a href="/common/client-errors/">Client Errors category page</a>.</p>
+    </section>
+
+    <section class="section">
+      <h2>Additional Resources</h2>
+      <p>If you’re new to HTTP status codes, start with our <a href="/status-codes/">status code index</a> for a complete list. Developers working on SEO migrations should review the <a href="/compare/301-vs-302/">301 vs 302 guide</a>. Those dealing with authentication errors should consult our <a href="/guides/401-unauthorized/">401 Unauthorized guide</a>. For server-side issues, the <a href="/guides/500-internal-server-error/">500 Internal Server Error guide</a> covers troubleshooting steps.</p>
+      <p>We update the FAQ regularly. If you have a question that isn’t covered here, <a href="mailto:hello@onlinedevtools.app">contact us</a> and we will add the answer.</p>
+    </section>
+
+    <aside class="section" aria-label="Advertisement">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-7167291111213614"
+           data-ad-slot="REPLACE_SLOT_ID"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <p class="footer-copy">© 2026 errorlookup.com</p>
+      <ul class="footer-meta-links" aria-label="Footer">
+        <li><a href="/status-codes/">Status Codes</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/terms/">Terms</a></li>
+      </ul>
+    </div>
+    <p class="footer-signature" aria-hidden="true">// Beware of The Old Soldier</p>
+  </footer>
+</body>
+</html>
