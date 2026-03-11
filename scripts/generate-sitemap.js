@@ -16,7 +16,24 @@ const staticPaths = [
   '/about/',
   '/contact/',
   '/privacy/',
-  '/terms/'
+  '/terms/',
+  '/faq/',
+  '/status/',
+  '/guides/404-not-found/',
+  '/guides/401-unauthorized/',
+  '/guides/403-forbidden/',
+  '/guides/429-too-many-requests/',
+  '/guides/500-internal-server-error/',
+  '/guides/502-bad-gateway/',
+  '/guides/503-service-unavailable/',
+  '/guides/504-gateway-timeout/',
+  '/guides/cloudflare-520/',
+  '/guides/cloudflare-522/',
+  '/guides/cloudflare-524/',
+  '/guides/nginx-499/',
+  '/guides/nginx-444/',
+  '/guides/net-err-connection-refused/',
+  '/guides/net-err-cert-common-name-invalid/',
 ];
 
 
