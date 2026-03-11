@@ -41,33 +41,12 @@
   }
   </script>
 
-  
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"What is an HTTP status code?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"An HTTP status code is a server response signal that tells a client whether a request succeeded, redirected, failed because of client input, or failed because of a server-side condition."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What is the difference between 401 and 403?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"401 usually means authentication is required or invalid, while 403 means the server understood the request but refuses to authorize it."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What does 500 Internal Server Error mean?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"500 Internal Server Error means the server hit an unexpected condition while trying to process the request."
-        }
-      }
-    ]
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"ErrorLookup",
+    "url":"https://errorlookup.com/"
   }
   </script>
 
@@ -216,7 +195,7 @@
     </section>
 
     <section class="section">
-      <h2>Frequently Asked Questions</h2>
+      <h2>Quick Answers</h2>
 
       <h3>What is an HTTP status code?</h3>
       <p>
@@ -236,6 +215,8 @@
         A <span class="code">500</span> response means the server encountered an unexpected condition while processing
         the request. It is a broad error and often requires checking logs, upstream services, recent deploys, and runtime configuration.
       </p>
+
+      <p><a href="/faq/">Visit the full FAQ</a></p>
     </section>
 
     <aside class="section" aria-label="Advertisement">
