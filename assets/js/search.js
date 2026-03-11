@@ -8,18 +8,26 @@ async function initSearch() {
   const codes = raw.codes || [];
 
   const quickRoutes = [
-    [/^404$|not found/, '/guides/404-not-found/'],
+    [/^404$|\bnot found\b/, '/guides/404-not-found/'],
+    [/^401$|\bunauthorized\b/, '/guides/401-unauthorized/'],
+    [/^403$|\bforbidden\b/, '/guides/403-forbidden/'],
+    [/^429$|too many requests|rate limit/, '/guides/429-too-many-requests/'],
     [/^500$|internal server/, '/guides/500-internal-server-error/'],
-    [/cloudflare\s*522|\b522\b.*cloudflare/, '/guides/cloudflare-522/'],
+    [/^502$|bad gateway/, '/guides/502-bad-gateway/'],
+    [/^503$|service unavailable/, '/guides/503-service-unavailable/'],
+    [/^504$|gateway timeout|timed out gateway/, '/guides/504-gateway-timeout/'],
     [/cloudflare\s*520|\b520\b.*cloudflare/, '/guides/cloudflare-520/'],
+    [/cloudflare\s*522|\b522\b.*cloudflare|connection timed out cloudflare/, '/guides/cloudflare-522/'],
     [/cloudflare\s*524|\b524\b.*cloudflare/, '/guides/cloudflare-524/'],
-    [/nginx\s*499|\b499\b.*nginx/, '/guides/nginx-499/'],
-    [/nginx\s*444|\b444\b.*nginx/, '/guides/nginx-444/'],
-    [/err_connection_refused|connection refused/, '/guides/net-err-connection-refused/'],
-    [/err_cert_common_name_invalid|common name invalid/, '/guides/net-err-cert-common-name-invalid/']
+    [/nginx\s*499|\b499\b.*nginx|client closed request/, '/guides/nginx-499/'],
+    [/nginx\s*444|\b444\b.*nginx|no response nginx/, '/guides/nginx-444/'],
+    [/err_connection_refused|connection refused|net::err_connection_refused/, '/guides/net-err-connection-refused/'],
+    [/err_cert_common_name_invalid|common name invalid|certificate name mismatch/, '/guides/net-err-cert-common-name-invalid/'],
+    [/err_name_not_resolved|name not resolved|dns.*not resolved|could not resolve host/, '/guides/net-err-name-not-resolved/'],
+    [/ssl handshake failed|tls handshake failed|handshake failure/, '/guides/ssl-handshake-failed/']
   ];
 
-  const norm = (v) => String(v || '').toLowerCase().trim();
+  const norm = (v) => String(v || '').toLowerCase().replace(/[_-]+/g, ' ').trim();
   const routeFromTerm = (term) => {
     for (const [pattern, route] of quickRoutes) {
       if (pattern.test(term)) return route;
@@ -32,9 +40,10 @@ async function initSearch() {
 
   const scoreResult = (item, term) => {
     let s = 0;
-    if (String(item.code) === term) s += 200;
-    const haystack = [item.title, item.phrase, item.category, item.class, ...(item.aliases || []), ...(item.keywords || [])].join(' ').toLowerCase();
+    if (String(item.code) === term) s += 220;
+    const haystack = [item.code, item.title, item.phrase, item.category, item.class, ...(item.aliases || []), ...(item.keywords || [])].join(' ').toLowerCase();
     if (haystack.includes(term)) s += 40;
+    if (term.length > 2 && haystack.split(' ').some((token) => token.startsWith(term))) s += 15;
     return s;
   };
 
