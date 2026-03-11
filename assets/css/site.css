@@ -48,3 +48,16 @@ th,td{padding:.6rem;border:1px solid var(--border);vertical-align:top}
   .footer-logo img{height:52px}
   .footer-signature{letter-spacing:.08em}
 }
+
+.footer-logo img{
+  height:60px;
+  width:auto;
+  display:block;
+  margin:0 auto;
+  opacity:.92;
+}
+
+:root.dark .footer-logo img{
+  filter:drop-shadow(0 0 6px rgba(147,197,253,.35))
+         drop-shadow(0 0 14px rgba(147,197,253,.18));
+}
