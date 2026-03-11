@@ -32,7 +32,7 @@ th,td{padding:.6rem;border:1px solid var(--border);vertical-align:top}
 
 .footer-main{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;row-gap:.7rem;padding:.2rem 0}
 .footer-logo{grid-column:1/-1;justify-self:center;text-align:center}
-.footer-logo img{height:60px;width:auto;display:block;margin:0 auto;opacity:.92}
+.footer-logo img{width:520px;max-width:100%;height:150px;object-fit:cover;object-position:center;display:block;margin:0 auto;opacity:.95}
 .footer-copy{grid-column:1;justify-self:start;margin:0;color:var(--muted);font-size:.78rem;text-transform:lowercase;letter-spacing:.02em;text-align:left}
 .footer-meta-links{grid-column:3;justify-self:end;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.7rem;list-style:none;margin:0;padding:0}
 .footer-meta-links a{font-size:.78rem;text-decoration:none;color:var(--muted)}
@@ -45,18 +45,21 @@ th,td{padding:.6rem;border:1px solid var(--border);vertical-align:top}
   .header-actions{width:100%;justify-content:flex-end}
   .fuel-link{font-size:.85rem}
   .footer-main{grid-template-columns:1fr;row-gap:.55rem}
-  .footer-logo img{height:52px}
+  .footer-logo img{width:320px;max-width:100%;height:90px}
   .footer-copy{grid-column:1;justify-self:center;text-align:center}
   .footer-meta-links{grid-column:1;justify-self:center;justify-content:center}
   .footer-signature{letter-spacing:.08em}
 }
 
 .footer-logo img{
-  height:60px;
-  width:auto;
+  width:520px;
+  max-width:100%;
+  height:150px;
+  object-fit:cover;
+  object-position:center;
   display:block;
   margin:0 auto;
-  opacity:.92;
+  opacity:.95;
 }
 
 :root.dark .footer-logo img{
