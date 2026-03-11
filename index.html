@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Error Lookup for Developers: HTTP, Cloudflare, Nginx, Browser Errors | ErrorLookup</title>
-  <meta name="description" content="Fast error lookup for developers, sysadmins, and DevOps teams. Troubleshoot HTTP, Cloudflare, Nginx, and browser errors with practical fixes.">
+  <meta name="description" content="Fast, practical troubleshooting reference for HTTP status codes, Cloudflare incidents, Nginx errors, browser/network failures, and SSL/TLS issues.">
   <link rel="canonical" href="https://errorlookup.com/">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <meta property="og:type" content="website">
@@ -24,7 +24,8 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-75H3P692GN"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-75H3P692GN');</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"ErrorLookup","url":"https://errorlookup.com/","potentialAction":{"@type":"SearchAction","target":"https://errorlookup.com/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"ErrorLookup Developer Error Guides","url":"https://errorlookup.com/","description":"SEO-first troubleshooting guides for common web and infrastructure errors."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"ErrorLookup","url":"https://errorlookup.com/","logo":"https://errorlookup.com/assets/logo.png"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is ErrorLookup different from a status code table?","acceptedAnswer":{"@type":"Answer","text":"Each guide includes operational context: likely causes, first checks, deeper diagnostics, and remediation paths across app, proxy, CDN, and browser layers."}},{"@type":"Question","name":"Can I use this during a live production incident?","acceptedAnswer":{"@type":"Answer","text":"Yes. Start with the exact code or browser error, run first checks to isolate where failure occurs, then use related links to confirm nearby failure modes."}},{"@type":"Question","name":"Do Cloudflare 52x errors always mean my origin is down?","acceptedAnswer":{"@type":"Answer","text":"Not always. 52x errors can be caused by origin reachability, TLS negotiation, firewall policy, overloaded upstreams, or mismatched timeout settings."}},{"@type":"Question","name":"What is the fastest way to separate 502, 503, and 504?","acceptedAnswer":{"@type":"Answer","text":"Treat 502 as invalid upstream response, 503 as intentional unavailability or overload, and 504 as timeout waiting on upstream. Then verify gateway and upstream logs for timing and connection clues."}},{"@type":"Question","name":"When should I use comparison pages?","acceptedAnswer":{"@type":"Answer","text":"Use comparisons when symptoms overlap, such as 401 vs 403 or 502 vs 504. They help pick the right remediation path before changing production config."}},{"@type":"Question","name":"Are browser errors like ERR_CONNECTION_REFUSED HTTP errors?","acceptedAnswer":{"@type":"Answer","text":"No. Browser network errors usually occur before an HTTP response is received. Troubleshooting should focus on DNS, TCP reachability, TLS, and endpoint availability."}},{"@type":"Question","name":"Does the homepage content load without JavaScript?","acceptedAnswer":{"@type":"Answer","text":"Yes. Core guides, triage workflows, and FAQ content are rendered in static HTML for crawlability and reliability."}}]}</script>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script defer src="/assets/js/theme.js"></script>
   <script defer src="/assets/js/site.js"></script>
@@ -36,22 +37,123 @@
 <section class="hero section">
   <p class="eyebrow">Developer Error Lookup</p>
   <h1>Find and Fix HTTP, Cloudflare, Nginx, and Browser Errors Fast</h1>
-  <p class="section-intro">Jump to plain-English meanings, likely causes, and practical first checks used during active incidents.</p>
+  <p class="section-intro">ErrorLookup is a practical troubleshooting reference for production incidents. Use it to decode failures, isolate likely root causes, and move from symptom to verified fix with less guesswork.</p>
   <form class="search-form" id="lookup-search" role="search" autocomplete="off" action="/status-codes/"><label for="lookup-input">Search error guides</label><input id="lookup-input" name="q" type="search" placeholder="Try: 404, cloudflare 522, nginx 499, connection refused" aria-describedby="search-help"><p id="search-help" class="muted">Enter a code or phrase to jump directly to the best guide.</p><ul id="search-suggestions" class="suggestions" role="listbox" aria-label="Search suggestions"></ul></form>
   <div class="quick-grid major-grid"><a href="/guides/404-not-found/">HTTP 404 Not Found</a><a href="/guides/500-internal-server-error/">HTTP 500 Internal Server Error</a><a href="/guides/502-bad-gateway/">HTTP 502 Bad Gateway</a><a href="/guides/503-service-unavailable/">HTTP 503 Service Unavailable</a><a href="/guides/504-gateway-timeout/">HTTP 504 Gateway Timeout</a><a href="/guides/cloudflare-522/">Cloudflare 522 Connection Timed Out</a><a href="/guides/nginx-499/">Nginx 499 Client Closed Request</a><a href="/guides/net-err-connection-refused/">ERR_CONNECTION_REFUSED</a></div>
   <div class="quick-grid"><a href="/guides/401-unauthorized/">HTTP 401 Unauthorized</a><a href="/guides/403-forbidden/">HTTP 403 Forbidden</a><a href="/guides/429-too-many-requests/">HTTP 429 Too Many Requests</a><a href="/guides/cloudflare-520/">Cloudflare 520</a><a href="/guides/cloudflare-524/">Cloudflare 524</a><a href="/guides/nginx-444/">Nginx 444</a><a href="/guides/net-err-cert-common-name-invalid/">ERR_CERT_COMMON_NAME_INVALID</a><a href="/guides/net-err-name-not-resolved/">ERR_NAME_NOT_RESOLVED</a><a href="/guides/ssl-handshake-failed/">SSL Handshake Failed</a></div>
 </section>
+
+<section class="section">
+  <h2>How ErrorLookup Helps During Triage</h2>
+  <p class="section-intro">During active incidents, teams need short feedback loops: identify what failed, verify where it failed, and apply the least risky fix first. Each guide is structured to support that flow under pressure.</p>
+  <div class="link-columns">
+    <ul>
+      <li>Clear meaning of the error in protocol and runtime context.</li>
+      <li>Likely causes across application, upstream, gateway, edge, and client layers.</li>
+      <li>First checks that quickly confirm or rule out common failure paths.</li>
+    </ul>
+    <ul>
+      <li>Deeper checks for logs, timeouts, header handling, and configuration drift.</li>
+      <li>Actionable fixes that map to real deployment and infrastructure workflows.</li>
+      <li>Related-error links to compare adjacent symptoms before changing production.</li>
+    </ul>
+  </div>
+  <p class="muted">Start with <a href="/status-codes/">all status codes</a> when you know the code, or use <a href="/compare/">comparison pages</a> when two errors look similar in dashboards and alerts.</p>
+</section>
+
+<section class="section">
+  <h2>Common Error Families</h2>
+  <p class="section-intro">Most outages are not single-layer failures. These groups help you map symptoms to the right layer quickly and avoid chasing the wrong fix.</p>
+  <h3>HTTP client errors (4xx)</h3>
+  <p>Client errors usually indicate request validity, authentication, authorization, routing, or rate-limit issues rather than origin crashes. Focus on request shape, auth state, route ownership, and policy gates. Start with <a href="/common/client-errors/">4xx client errors</a>, then drill into <a href="/guides/401-unauthorized/">401</a>, <a href="/guides/403-forbidden/">403</a>, <a href="/guides/404-not-found/">404</a>, and <a href="/guides/429-too-many-requests/">429</a>.</p>
+
+  <h3>HTTP server errors (5xx)</h3>
+  <p>Server errors point to failures in application code, upstream dependencies, or reverse-proxy handoff. Separate malformed upstream responses from intentional overload and timeout behavior before tuning infrastructure. Use <a href="/common/server-errors/">5xx server errors</a> and reference <a href="/guides/500-internal-server-error/">500</a>, <a href="/guides/502-bad-gateway/">502</a>, <a href="/guides/503-service-unavailable/">503</a>, and <a href="/guides/504-gateway-timeout/">504</a>.</p>
+
+  <h3>Cloudflare edge errors</h3>
+  <p>Cloudflare 52x errors often mean edge-to-origin problems, not browser-to-edge problems. Validate origin reachability, TLS compatibility, firewall rules, and origin response timing in the same window as Cloudflare event logs. See <a href="/guides/cloudflare-520/">520</a>, <a href="/guides/cloudflare-522/">522</a>, and <a href="/guides/cloudflare-524/">524</a>.</p>
+
+  <h3>Nginx and reverse proxy errors</h3>
+  <p>Proxy-layer errors expose handoff details between clients, load balancers, and upstream services. Inspect timeout values, upstream keepalive settings, header limits, and request cancellation behavior to explain intermittent failures. Review <a href="/guides/nginx-499/">Nginx 499</a>, <a href="/guides/nginx-444/">Nginx 444</a>, and related <a href="/guides/502-bad-gateway/">502 gateway failures</a>.</p>
+
+  <h3>Browser, network, and SSL/TLS errors</h3>
+  <p>When the browser reports a network error, HTTP may never have started. Prioritize DNS resolution, socket reachability, certificate identity, and TLS handshake state before debugging application handlers. Start with <a href="/guides/net-err-connection-refused/">ERR_CONNECTION_REFUSED</a>, <a href="/guides/net-err-name-not-resolved/">ERR_NAME_NOT_RESOLVED</a>, <a href="/guides/net-err-cert-common-name-invalid/">ERR_CERT_COMMON_NAME_INVALID</a>, and <a href="/guides/ssl-handshake-failed/">SSL handshake failures</a>.</p>
+</section>
+
+<section class="section">
+  <h2>What to Check First</h2>
+  <p class="section-intro">Use this checklist to reduce mean time to isolate during live incidents.</p>
+  <ul class="dense-list">
+    <li>Confirm DNS answers and TTL behavior match the expected environment and failover state.</li>
+    <li>Verify origin health endpoints from the same network path used by your edge or load balancer.</li>
+    <li>Check reverse proxy and ingress config diffs for recent deployment drift.</li>
+    <li>Validate certificate validity, SAN coverage, chain order, and protocol/cipher compatibility.</li>
+    <li>Correlate access and error logs across CDN, proxy, and origin using timestamps and request IDs.</li>
+    <li>Inspect upstream timeout settings at every hop; mismatched budgets create false 502/504 patterns.</li>
+    <li>Audit authentication middleware, token expiration, and permission mapping for sudden 401/403 spikes.</li>
+    <li>Review cache behavior and stale-content rules to separate cache misses from origin failures.</li>
+    <li>Check WAF/CDN rules, bot controls, and geo policies for unintended blocks or challenge loops.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Popular Troubleshooting Paths</h2>
+  <p class="section-intro">Follow these clusters when incident symptoms overlap.</p>
+  <h3>502 / 503 / 504 gateway cluster</h3>
+  <p><a href="/guides/502-bad-gateway/">502</a> usually indicates an invalid upstream response, <a href="/guides/503-service-unavailable/">503</a> often reflects overload or maintenance, and <a href="/guides/504-gateway-timeout/">504</a> indicates upstream wait exhaustion. Use <a href="/compare/502-vs-503/">502 vs 503</a>, <a href="/compare/503-vs-504/">503 vs 504</a>, and <a href="/compare/502-vs-504/">502 vs 504</a> to select the right remediation path.</p>
+
+  <h3>401 / 403 / 404 access and routing cluster</h3>
+  <p>These errors can look identical to users while requiring different owners to fix them. Use <a href="/compare/401-vs-403/">401 vs 403</a>, <a href="/compare/403-vs-404/">403 vs 404</a>, and <a href="/compare/401-vs-404/">401 vs 404</a> to distinguish authentication, authorization, and route resolution failures.</p>
+
+  <h3>Cloudflare 520 / 522 / 524 edge cluster</h3>
+  <p>Start from the edge code, then validate origin connectivity, TLS handshake behavior, and response timing in sequence. Compare <a href="/guides/cloudflare-520/">520</a>, <a href="/guides/cloudflare-522/">522</a>, and <a href="/guides/cloudflare-524/">524</a> when dashboards show mixed 52x bursts.</p>
+
+  <h3>Browser network and SSL handshake cluster</h3>
+  <p><a href="/guides/net-err-connection-refused/">ERR_CONNECTION_REFUSED</a> implies socket-level refusal, <a href="/guides/net-err-name-not-resolved/">ERR_NAME_NOT_RESOLVED</a> points to DNS failure, and <a href="/guides/ssl-handshake-failed/">SSL handshake failed</a> signals TLS negotiation breakdown. Use <a href="/guides/net-err-cert-common-name-invalid/">certificate mismatch guides</a> to validate endpoint identity before rotating certs.</p>
+</section>
+
+<section class="section">
+  <h2>Why Errors That Look Similar Are Different</h2>
+  <p class="section-intro">Superficially similar errors often happen at different layers and require different responders. Treating them as interchangeable increases incident duration and rollback risk.</p>
+  <p>A <span class="code">502</span> can originate in gateway-upstream translation while a <span class="code">504</span> is dominated by timeout budget exhaustion. A <span class="code">401</span> is usually identity/authentication state, while <span class="code">403</span> is policy/authorization state. Comparison guides like <a href="/compare/500-vs-502/">500 vs 502</a>, <a href="/compare/500-vs-504/">500 vs 504</a>, and <a href="/compare/404-vs-410/">404 vs 410</a> make these distinctions explicit so teams can route incidents to the correct owner quickly.</p>
+</section>
+
+<section class="section">
+  <h2>Use Cases</h2>
+  <h3>Debugging production incidents</h3>
+  <p>On-call engineers use ErrorLookup to translate alert noise into a concrete fault hypothesis, then validate it with layer-specific checks.</p>
+  <h3>Investigating deployment failures</h3>
+  <p>After releases, teams correlate new 4xx/5xx patterns with config and code changes to isolate regressions faster.</p>
+  <h3>Validating reverse proxy behavior</h3>
+  <p>Platform teams verify gateway and ingress behavior under timeout pressure, upstream restarts, and connection churn.</p>
+  <h3>Understanding browser-reported connection failures</h3>
+  <p>Support and SRE teams map browser error strings to DNS, TCP, and TLS checks to avoid app-layer misdiagnosis.</p>
+</section>
+
 <section class="section">
   <h2>Top Developer Error Guides</h2>
   <p class="section-intro">High-frequency production failures with concrete remediation steps.</p>
   <div class="link-columns"><ul><li><a href="/guides/404-not-found/">HTTP 404 Not Found</a></li><li><a href="/guides/401-unauthorized/">HTTP 401 Unauthorized</a></li><li><a href="/guides/403-forbidden/">HTTP 403 Forbidden</a></li><li><a href="/guides/429-too-many-requests/">HTTP 429 Too Many Requests</a></li><li><a href="/guides/500-internal-server-error/">HTTP 500 Internal Server Error</a></li></ul><ul><li><a href="/guides/502-bad-gateway/">HTTP 502 Bad Gateway</a></li><li><a href="/guides/503-service-unavailable/">HTTP 503 Service Unavailable</a></li><li><a href="/guides/504-gateway-timeout/">HTTP 504 Gateway Timeout</a></li><li><a href="/status-codes/">Browse all HTTP status codes</a></li><li><a href="/status/">Numeric status index</a></li></ul></div>
 </section>
+
 <section class="section">
-  <h2>Cloudflare, Nginx, and Browser Errors</h2>
-  <p class="section-intro">Edge and browser-specific failures that are often misdiagnosed as app outages.</p>
-  <div class="quick-grid"><a href="/guides/cloudflare-520/">Cloudflare 520 Unknown Error</a><a href="/guides/cloudflare-522/">Cloudflare 522 Connection Timed Out</a><a href="/guides/cloudflare-524/">Cloudflare 524 A Timeout Occurred</a><a href="/guides/nginx-499/">Nginx 499 Client Closed Request</a><a href="/guides/nginx-444/">Nginx 444 No Response</a><a href="/guides/net-err-connection-refused/">ERR_CONNECTION_REFUSED</a><a href="/guides/net-err-cert-common-name-invalid/">ERR_CERT_COMMON_NAME_INVALID</a><a href="/guides/net-err-name-not-resolved/">ERR_NAME_NOT_RESOLVED</a><a href="/guides/ssl-handshake-failed/">SSL Handshake Failed</a></div>
+  <h2>FAQ</h2>
+  <h3>How is ErrorLookup different from a status code table?</h3>
+  <p>Each guide explains meaning, likely causes, first checks, deeper checks, remediation options, and closely related errors.</p>
+  <h3>Can I use this during a live production incident?</h3>
+  <p>Yes. Start from the exact code or browser message, follow first checks to isolate layer, then use related guides to test alternatives.</p>
+  <h3>Do Cloudflare 52x errors always mean the origin is down?</h3>
+  <p>No. They can be caused by routing, TLS negotiation, firewall policy, or upstream timeout issues between edge and origin.</p>
+  <h3>What is the quickest way to separate 502, 503, and 504?</h3>
+  <p>Classify response type first (bad upstream response vs unavailable service vs timeout), then validate with proxy and origin logs.</p>
+  <h3>When should I use comparison pages?</h3>
+  <p>Use them when multiple plausible errors match the same symptom pattern and you need to avoid changing the wrong layer.</p>
+  <h3>Are browser network errors the same as HTTP errors?</h3>
+  <p>No. Browser network errors often occur before HTTP response handling, so DNS/TCP/TLS checks should come first.</p>
+  <h3>Is homepage content available without JavaScript?</h3>
+  <p>Yes. Core triage content and links are static HTML for reliability and crawlability.</p>
 </section>
-<section class="section"><h2>Comparisons</h2><p class="section-intro">Side-by-side references for errors that are easy to confuse during triage.</p><ul class="dense-list"><li><a href="/compare/301-vs-302/">301 vs 302</a></li><li><a href="/compare/401-vs-403/">401 vs 403</a></li><li><a href="/compare/403-vs-404/">403 vs 404</a></li><li><a href="/compare/404-vs-410/">404 vs 410</a></li><li><a href="/compare/429-vs-503/">429 vs 503</a></li><li><a href="/compare/500-vs-502/">500 vs 502</a></li><li><a href="/compare/500-vs-503/">500 vs 503</a></li><li><a href="/compare/502-vs-504/">502 vs 504</a></li></ul></section>
+
 <section class="section"><h2>Categories</h2><p class="section-intro">Navigate by response class when auditing services, APIs, and reverse proxies.</p><ul class="dense-list"><li><a href="/common/informational/">Informational (1xx)</a></li><li><a href="/common/success/">Success (2xx)</a></li><li><a href="/common/redirect-codes/">Redirects (3xx)</a></li><li><a href="/common/client-errors/">Client Errors (4xx)</a></li><li><a href="/common/server-errors/">Server Errors (5xx)</a></li></ul></section>
 </main>
 <footer class="site-footer"><div class="container footer-main"><div class="footer-logo"><img src="/assets/logo.png" alt="ErrorLookup logo"></div><p class="footer-copy">© 2026 errorlookup.com</p><ul class="footer-meta-links" aria-label="Footer"><li><a href="/status-codes/">Status Codes</a></li><li><a href="/about/">About</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/contact/">Contact</a></li><li><a href="/terms/">Terms</a></li></ul></div><p class="footer-signature" aria-hidden="true">// Beware of The Old Soldier</p></footer>
