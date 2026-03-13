@@ -38,7 +38,7 @@
   <script defer src="/assets/js/search.js"></script>
 </head>
 <body>
-<header class="site-header"><div class="container header-inner"><a class="header-logo" href="/" aria-label="ErrorLookup homepage"><img src="/assets/logo.png" alt="ErrorLookup logo" width="180" height="44"></a><nav class="primary-nav" aria-label="Primary"><ul class="nav-list"><li><a href="/status-codes/">Status Codes</a></li><li><a href="/guides/404-not-found/">Top Guides</a></li><li><a href="/common/client-errors/">Client Errors</a></li><li><a href="/common/server-errors/">Server Errors</a></li><li><a href="/compare/">Comparisons</a></li></ul></nav><div class="header-actions"><button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle dark mode">🌓</button></div></div></header>
+<header class="site-header"><div class="container header-inner"><a class="header-logo" href="/" aria-label="ErrorLookup homepage"><img src="/assets/logo.png" alt="ErrorLookup logo" width="180" height="44"></a><nav class="primary-nav" aria-label="Primary"><ul class="nav-list"><li><a href="/status-codes/">Status Codes</a></li><li><a href="/guides/404-not-found/">Top Guides</a></li><li><a href="/common/client-errors/">Client Errors</a></li><li><a href="/common/server-errors/">Server Errors</a></li><li><a href="/compare/">Comparisons</a></li></ul></nav><div class="header-actions"><a class="fuel-link" href="https://onlinedevtools.app/infrastructure" rel="noopener noreferrer">Fuel the Infrastructure</a><button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle dark mode">🌓</button></div></div></header>
 <main class="container">
 <section class="hero section">
   <p class="eyebrow">Developer Error Lookup</p>
@@ -142,23 +142,7 @@
   <div class="link-columns"><ul><li><a href="/guides/404-not-found/">HTTP 404 Not Found</a></li><li><a href="/guides/401-unauthorized/">HTTP 401 Unauthorized</a></li><li><a href="/guides/403-forbidden/">HTTP 403 Forbidden</a></li><li><a href="/guides/429-too-many-requests/">HTTP 429 Too Many Requests</a></li><li><a href="/guides/500-internal-server-error/">HTTP 500 Internal Server Error</a></li></ul><ul><li><a href="/guides/502-bad-gateway/">HTTP 502 Bad Gateway</a></li><li><a href="/guides/503-service-unavailable/">HTTP 503 Service Unavailable</a></li><li><a href="/guides/504-gateway-timeout/">HTTP 504 Gateway Timeout</a></li><li><a href="/status-codes/">Browse all HTTP status codes</a></li><li><a href="/status/">Numeric status index</a></li></ul></div>
 </section>
 
-<section class="section">
-  <h2>FAQ</h2>
-  <h3>How is ErrorLookup different from a status code table?</h3>
-  <p>Each guide explains meaning, likely causes, first checks, deeper checks, remediation options, and closely related errors.</p>
-  <h3>Can I use this during a live production incident?</h3>
-  <p>Yes. Start from the exact code or browser message, follow first checks to isolate layer, then use related guides to test alternatives.</p>
-  <h3>Do Cloudflare 52x errors always mean the origin is down?</h3>
-  <p>No. They can be caused by routing, TLS negotiation, firewall policy, or upstream timeout issues between edge and origin.</p>
-  <h3>What is the quickest way to separate 502, 503, and 504?</h3>
-  <p>Classify response type first (bad upstream response vs unavailable service vs timeout), then validate with proxy and origin logs.</p>
-  <h3>When should I use comparison pages?</h3>
-  <p>Use them when multiple plausible errors match the same symptom pattern and you need to avoid changing the wrong layer.</p>
-  <h3>Are browser network errors the same as HTTP errors?</h3>
-  <p>No. Browser network errors often occur before HTTP response handling, so DNS/TCP/TLS checks should come first.</p>
-  <h3>Is homepage content available without JavaScript?</h3>
-  <p>Yes. Core triage content and links are static HTML for reliability and crawlability.</p>
-</section>
+<section class="section"><h2>Need help fast?</h2><p class="section-intro">Have questions? Visit the FAQ for direct answers and troubleshooting guidance.</p><p><a class="btn-ghost" href="/faq/">Have questions? Visit the FAQ</a></p></section>
 
 <section class="section"><h2>Categories</h2><p class="section-intro">Navigate by response class when auditing services, APIs, and reverse proxies.</p><ul class="dense-list"><li><a href="/common/informational/">Informational (1xx)</a></li><li><a href="/common/success/">Success (2xx)</a></li><li><a href="/common/redirect-codes/">Redirects (3xx)</a></li><li><a href="/common/client-errors/">Client Errors (4xx)</a></li><li><a href="/common/server-errors/">Server Errors (5xx)</a></li></ul></section>
 </main>
