@@ -22,4 +22,25 @@ function setupBreadcrumbs(){
   let cur='';
   bc.innerHTML='<a href="/">Home</a> / '+path.map((p,i)=>{cur+='/'+p; return i===path.length-1?`<span>${p.replace(/-/g,' ')}</span>`:`<a href="${cur}/">${p.replace(/-/g,' ')}</a>`}).join(' / ');
 }
-document.addEventListener('DOMContentLoaded', async()=>{await includePartials();setActiveNav();setupBreadcrumbs();});
+
+function loadSearchScript(){
+  return new Promise((resolve)=>{
+    if(window.ErrorLookupSearch){resolve();return;}
+    const existing=document.querySelector('script[data-search-script="true"]');
+    if(existing){existing.addEventListener('load',()=>resolve(),{once:true});return;}
+    const s=document.createElement('script');
+    s.src='/assets/js/search.js';
+    s.defer=true;
+    s.dataset.searchScript='true';
+    s.onload=()=>resolve();
+    document.head.appendChild(s);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', async()=>{
+  await includePartials();
+  setActiveNav();
+  setupBreadcrumbs();
+  await loadSearchScript();
+  if(window.ErrorLookupSearch){window.ErrorLookupSearch.init();}
+});

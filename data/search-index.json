@@ -1,0 +1,628 @@
+{
+  "entries": [
+    {
+      "label": "HTTP 100 Continue",
+      "code": "100",
+      "url": "/guides/100-continue/",
+      "hint": "Guide",
+      "group": "HTTP 1xx",
+      "searchText": "http 100 continue  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 101 Switching Protocols",
+      "code": "101",
+      "url": "/guides/101-switching-protocols/",
+      "hint": "Guide",
+      "group": "HTTP 1xx",
+      "searchText": "http 101 switching protocols  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 102 Processing",
+      "code": "102",
+      "url": "/guides/102-processing/",
+      "hint": "Guide",
+      "group": "HTTP 1xx",
+      "searchText": "http 102 processing  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 103 Early Hints",
+      "code": "103",
+      "url": "/guides/103-early-hints/",
+      "hint": "Guide",
+      "group": "HTTP 1xx",
+      "searchText": "http 103 early hints  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 104 Upload Resumption Supported",
+      "code": "104",
+      "url": "/guides/104-upload-resumption-supported/",
+      "hint": "Guide",
+      "group": "HTTP 1xx",
+      "searchText": "http 104 upload resumption supported  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 200 OK",
+      "code": "200",
+      "url": "/guides/200-ok/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 200 ok  normal successful request  normal successful request"
+    },
+    {
+      "label": "HTTP 201 Created",
+      "code": "201",
+      "url": "/guides/201-created/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 201 created  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 202 Accepted",
+      "code": "202",
+      "url": "/guides/202-accepted/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 202 accepted  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 203 Non-Authoritative Information",
+      "code": "203",
+      "url": "/guides/203-non-authoritative-information/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 203 non-authoritative information  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 204 No Content",
+      "code": "204",
+      "url": "/guides/204-no-content/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 204 no content  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 205 Reset Content",
+      "code": "205",
+      "url": "/guides/205-reset-content/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 205 reset content  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 206 Partial Content",
+      "code": "206",
+      "url": "/guides/206-partial-content/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 206 partial content  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 207 Multi-Status",
+      "code": "207",
+      "url": "/guides/207-multi-status/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 207 multi-status  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 208 Already Reported",
+      "code": "208",
+      "url": "/guides/208-already-reported/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 208 already reported  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 226 IM Used",
+      "code": "226",
+      "url": "/guides/226-im-used/",
+      "hint": "Guide",
+      "group": "HTTP 2xx",
+      "searchText": "http 226 im used  normal protocol behavior  normal protocol behavior"
+    },
+    {
+      "label": "HTTP 300 Multiple Choices",
+      "code": "300",
+      "url": "/guides/300-multiple-choices/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 300 multiple choices  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 301 Moved Permanently",
+      "code": "301",
+      "url": "/guides/301-moved-permanently/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 301 moved permanently  site migration url restructuring canonical redirect setup  site migration restructuring canonical redirect setup"
+    },
+    {
+      "label": "HTTP 302 Found",
+      "code": "302",
+      "url": "/guides/302-found/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 302 found  temporary campaign page a/b test routing short-term redirect logic  temporary campaign page test routing short term redirect logic"
+    },
+    {
+      "label": "HTTP 303 See Other",
+      "code": "303",
+      "url": "/guides/303-see-other/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 303 see other  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 304 Not Modified",
+      "code": "304",
+      "url": "/guides/304-not-modified/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 304 not modified  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 305 Use Proxy",
+      "code": "305",
+      "url": "/guides/305-use-proxy/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 305 use proxy  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 306 Unused",
+      "code": "306",
+      "url": "/guides/306-unknown/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 306 unused    "
+    },
+    {
+      "label": "HTTP 306 Unused",
+      "code": "306",
+      "url": "/guides/306-unused/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 306 unused    "
+    },
+    {
+      "label": "HTTP 307 Temporary Redirect",
+      "code": "307",
+      "url": "/guides/307-temporary-redirect/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 307 temporary redirect  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 308 Permanent Redirect",
+      "code": "308",
+      "url": "/guides/308-permanent-redirect/",
+      "hint": "Guide",
+      "group": "HTTP 3xx",
+      "searchText": "http 308 permanent redirect  resource moved to a different uri canonicalization or routing rule caching or method-preservation choice  resource moved different canonicalization routing rule caching method preservation choice"
+    },
+    {
+      "label": "HTTP 400 Bad Request",
+      "code": "400",
+      "url": "/guides/400-bad-request/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 400 bad request  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 401 Unauthorized",
+      "code": "401",
+      "url": "/guides/401-unauthorized/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 401 unauthorized the request lacks valid authentication credentials. expired jwt or oauth token authorization header dropped at proxy boundary wrong audience/issuer claims clock skew breaks signed token validation  request lacks valid authentication credentials expired oauth token authorization header dropped proxy boundary wrong"
+    },
+    {
+      "label": "HTTP 402 Payment Required",
+      "code": "402",
+      "url": "/guides/402-payment-required/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 402 payment required  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 403 Forbidden",
+      "code": "403",
+      "url": "/guides/403-forbidden/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 403 forbidden the server understood the request but refuses to authorize it. role lacks required permission waf/security rule blocks source ip csrf protection blocks request filesystem acl denies web process  server understood request refuses authorize role lacks required permission security rule blocks source csrf"
+    },
+    {
+      "label": "HTTP 404 Not Found",
+      "code": "404",
+      "url": "/guides/404-not-found/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 404 not found the server is reachable, but the url does not map to a resource. deploy changed routes without redirect rules case-sensitive paths differ between environments rewrite rules strip required url segments static files were not published to the target environment  server reachable does resource deploy changed routes without redirect rules case sensitive paths differ"
+    },
+    {
+      "label": "HTTP 405 Method Not Allowed",
+      "code": "405",
+      "url": "/guides/405-method-not-allowed/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 405 method not allowed  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 406 Not Acceptable",
+      "code": "406",
+      "url": "/guides/406-not-acceptable/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 406 not acceptable  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 407 Proxy Authentication Required",
+      "code": "407",
+      "url": "/guides/407-proxy-authentication-required/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 407 proxy authentication required  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 408 Request Timeout",
+      "code": "408",
+      "url": "/guides/408-request-timeout/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 408 request timeout  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 409 Conflict",
+      "code": "409",
+      "url": "/guides/409-conflict/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 409 conflict  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 410 Gone",
+      "code": "410",
+      "url": "/guides/410-gone/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 410 gone  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 411 Length Required",
+      "code": "411",
+      "url": "/guides/411-length-required/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 411 length required  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 412 Precondition Failed",
+      "code": "412",
+      "url": "/guides/412-precondition-failed/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 412 precondition failed  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 413 Content Too Large",
+      "code": "413",
+      "url": "/guides/413-content-too-large/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 413 content too large  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 414 URI Too Long",
+      "code": "414",
+      "url": "/guides/414-uri-too-long/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 414 uri too long  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 415 Unsupported Media Type",
+      "code": "415",
+      "url": "/guides/415-unsupported-media-type/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 415 unsupported media type  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 416 Range Not Satisfiable",
+      "code": "416",
+      "url": "/guides/416-range-not-satisfiable/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 416 range not satisfiable  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 417 Expectation Failed",
+      "code": "417",
+      "url": "/guides/417-expectation-failed/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 417 expectation failed  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 418 Unused",
+      "code": "418",
+      "url": "/guides/418-unknown/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 418 unused  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 418 Unused",
+      "code": "418",
+      "url": "/guides/418-unused/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 418 unused  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 421 Misdirected Request",
+      "code": "421",
+      "url": "/guides/421-misdirected-request/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 421 misdirected request  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 422 Unprocessable Content",
+      "code": "422",
+      "url": "/guides/422-unprocessable-content/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 422 unprocessable content  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 423 Locked",
+      "code": "423",
+      "url": "/guides/423-locked/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 423 locked  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 424 Failed Dependency",
+      "code": "424",
+      "url": "/guides/424-failed-dependency/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 424 failed dependency  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 425 Too Early",
+      "code": "425",
+      "url": "/guides/425-too-early/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 425 too early  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 426 Upgrade Required",
+      "code": "426",
+      "url": "/guides/426-upgrade-required/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 426 upgrade required  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 427 Unassigned",
+      "code": "427",
+      "url": "/guides/427-unassigned/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 427 unassigned  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 428 Precondition Required",
+      "code": "428",
+      "url": "/guides/428-precondition-required/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 428 precondition required  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 429 Too Many Requests",
+      "code": "429",
+      "url": "/guides/429-too-many-requests/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 429 too many requests the client sent requests faster than allowed by a rate limit. retry storms after transient failures client missing exponential backoff bot/scraper traffic spikes rate thresholds configured too low  client sent requests faster than allowed rate limit retry storms after transient failures missing"
+    },
+    {
+      "label": "HTTP 430 Unassigned",
+      "code": "430",
+      "url": "/guides/430-unassigned/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 430 unassigned  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 431 Request Header Fields Too Large",
+      "code": "431",
+      "url": "/guides/431-request-header-fields-too-large/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 431 request header fields too large  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 451 Unavailable For Legal Reasons",
+      "code": "451",
+      "url": "/guides/451-unavailable-for-legal-reasons/",
+      "hint": "Guide",
+      "group": "HTTP 4xx",
+      "searchText": "http 451 unavailable for legal reasons  malformed request format authentication or authorization mismatch missing resource or route  malformed request format authentication authorization mismatch missing resource route"
+    },
+    {
+      "label": "HTTP 500 Internal Server Error",
+      "code": "500",
+      "url": "/guides/500-internal-server-error/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 500 internal server error the application failed unexpectedly while handling the request. unhandled exception in request path missing secret/config after deploy schema migration mismatch template/render crash under real data  application failed unexpectedly while handling request unhandled exception path missing secret config after deploy"
+    },
+    {
+      "label": "HTTP 501 Not Implemented",
+      "code": "501",
+      "url": "/guides/501-not-implemented/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 501 not implemented  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 502 Bad Gateway",
+      "code": "502",
+      "url": "/guides/502-bad-gateway/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 502 bad gateway a gateway/proxy got an invalid response from upstream. upstream crashed mid-response proxy protocol mismatch (http/https) wrong upstream host or port unhealthy load-balancer target  gateway proxy invalid response upstream crashed protocol mismatch https wrong host port unhealthy load"
+    },
+    {
+      "label": "HTTP 503 Service Unavailable",
+      "code": "503",
+      "url": "/guides/503-service-unavailable/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 503 service unavailable the service is temporarily unable to process requests. autoscaling lag under sudden load database connection pool saturation maintenance flag left enabled circuit breaker open after repeated upstream failures  service temporarily unable process requests autoscaling under sudden load database connection pool saturation maintenance"
+    },
+    {
+      "label": "HTTP 504 Gateway Timeout",
+      "code": "504",
+      "url": "/guides/504-gateway-timeout/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 504 gateway timeout a gateway timed out waiting for upstream response. slow database queries upstream worker deadlocks network latency between edge and origin mismatched timeout values across layers  gateway timed waiting upstream response slow database queries worker deadlocks network latency between edge"
+    },
+    {
+      "label": "HTTP 505 HTTP Version Not Supported",
+      "code": "505",
+      "url": "/guides/505-http-version-not-supported/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 505 http version not supported  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 506 Variant Also Negotiates",
+      "code": "506",
+      "url": "/guides/506-variant-also-negotiates/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 506 variant also negotiates  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 507 Insufficient Storage",
+      "code": "507",
+      "url": "/guides/507-insufficient-storage/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 507 insufficient storage  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 508 Loop Detected",
+      "code": "508",
+      "url": "/guides/508-loop-detected/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 508 loop detected  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 509 Unassigned",
+      "code": "509",
+      "url": "/guides/509-unassigned/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 509 unassigned  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 510 Not Extended",
+      "code": "510",
+      "url": "/guides/510-not-extended/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 510 not extended  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "HTTP 511 Network Authentication Required",
+      "code": "511",
+      "url": "/guides/511-network-authentication-required/",
+      "hint": "Guide",
+      "group": "HTTP 5xx",
+      "searchText": "http 511 network authentication required  unhandled server-side exception upstream service failure runtime configuration issue  unhandled server side exception upstream service failure runtime configuration issue"
+    },
+    {
+      "label": "Cloudflare 520 Unknown Error",
+      "code": "520",
+      "url": "/guides/cloudflare-520/",
+      "hint": "Guide",
+      "group": "Cloudflare",
+      "searchText": "cloudflare 520 unknown error cloudflare reached origin but received an unexpected response. origin process crashes intermittently oversized/invalid response headers firewall intermittently blocks cloudflare ips origin http/2 misconfiguration  cloudflare reached origin received unexpected response process crashes intermittently oversized invalid headers firewall blocks"
+    },
+    {
+      "label": "Cloudflare 522 Connection Timed Out",
+      "code": "522",
+      "url": "/guides/cloudflare-522/",
+      "hint": "Guide",
+      "group": "Cloudflare",
+      "searchText": "cloudflare 522 connection timed out cloudflare could not complete tcp handshake to origin in time. origin service down firewall blocks cloudflare edge ranges syn backlog saturation dns points to stale origin ip  cloudflare could complete handshake origin time service down firewall blocks edge ranges backlog saturation"
+    },
+    {
+      "label": "Cloudflare 524 A Timeout Occurred",
+      "code": "524",
+      "url": "/guides/cloudflare-524/",
+      "hint": "Guide",
+      "group": "Cloudflare",
+      "searchText": "cloudflare 524 a timeout occurred cloudflare connected to origin but timed out waiting for http response. long uncached queries blocking external api dependency large report generation in request path worker queue congestion  cloudflare connected origin timed waiting response long uncached queries blocking external dependency large report"
+    },
+    {
+      "label": "ERR_CERT_COMMON_NAME_INVALID",
+      "code": "ERR_CERT_COMMON_NAME_INVALID",
+      "url": "/guides/net-err-cert-common-name-invalid/",
+      "hint": "Guide",
+      "group": "Browser/Network",
+      "searchText": "err_cert_common_name_invalid tls certificate does not match hostname in url. certificate issued for different domain wildcard does not cover nested hostname cdn/origin serves default certificate stale certificate after renewal err_cert_common_name_invalid certificate does match hostname issued different domain wildcard cover nested origin serves default stale"
+    },
+    {
+      "label": "ERR_CONNECTION_REFUSED",
+      "code": "ERR_CONNECTION_REFUSED",
+      "url": "/guides/net-err-connection-refused/",
+      "hint": "Guide",
+      "group": "Browser/Network",
+      "searchText": "err_connection_refused browser could not open a tcp connection to host/port. service crashed or failed to start service bound only to localhost container port not published security group/firewall denies inbound port err_connection_refused browser could open connection host port service crashed failed start bound only localhost container"
+    },
+    {
+      "label": "ERR_NAME_NOT_RESOLVED",
+      "code": "ERR_NAME_NOT_RESOLVED",
+      "url": "/guides/net-err-name-not-resolved/",
+      "hint": "Guide",
+      "group": "Browser/Network",
+      "searchText": "err_name_not_resolved browser cannot resolve the hostname to an ip address, so it cannot open a connection. missing a/aaaa/cname for hostname typo in app or browser url nameserver delegation/zone misconfiguration resolver outage or split-horizon mismatch err_name_not_resolved browser cannot resolve hostname address open connection missing aaaa cname typo nameserver delegation zone"
+    },
+    {
+      "label": "Nginx 444 No Response",
+      "code": "444",
+      "url": "/guides/nginx-444/",
+      "hint": "Guide",
+      "group": "Nginx",
+      "searchText": "nginx 444 no response nginx intentionally closes connection without an http response body. server block returns 444 for unknown hosts waf-style deny rule over-matches host/sni mismatch routes to deny block location rule catches valid application paths  nginx intentionally closes connection without response body server block returns unknown hosts style deny"
+    },
+    {
+      "label": "Nginx 499 Client Closed Request",
+      "code": "499",
+      "url": "/guides/nginx-499/",
+      "hint": "Guide",
+      "group": "Nginx",
+      "searchText": "nginx 499 client closed request nginx logged that the client closed the connection first. very slow upstream responses aggressive client timeout settings frontend cancels in-flight requests mobile network instability  nginx logged client closed connection first very slow upstream responses aggressive timeout settings frontend"
+    },
+    {
+      "label": "SSL Handshake Failed",
+      "code": "",
+      "url": "/guides/ssl-handshake-failed/",
+      "hint": "Guide",
+      "group": "Browser/Network",
+      "searchText": "ssl handshake failed tls negotiation failed before any http request/response could be exchanged. client and server share no compatible tls versions/ciphers intermediate certificate missing in served chain wrong certificate served for requested sni hostname mtls required but client certificate missing/invalid  negotiation failed before request response could exchanged client server share compatible versions ciphers intermediate"
+    }
+  ]
+}
