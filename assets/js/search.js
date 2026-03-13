@@ -1,91 +1,284 @@
-async function initSearch() {
-  const form = document.getElementById('lookup-search');
-  if (!form) return;
+(function () {
+  const SEARCH_INDEX_PATH = '/data/search-index.json';
+  const CODES_PATH = '/data/codes.json';
+  const RECENT_KEY = 'errorlookup_recent_searches_v1';
 
-  const input = document.getElementById('lookup-input');
-  const list = document.getElementById('search-suggestions');
-  const raw = await fetch('/data/codes.json').then((r) => r.json());
-  const codes = raw.codes || [];
+  const TYPO_FIXES = {
+    ngnix: 'nginx',
+    clodflare: 'cloudflare',
+    connexion: 'connection',
+    forbiden: 'forbidden',
+    unauthorised: 'unauthorized'
+  };
 
-  const quickRoutes = [
-    [/^404$|\bnot found\b/, '/guides/404-not-found/'],
-    [/^401$|\bunauthorized\b/, '/guides/401-unauthorized/'],
-    [/^403$|\bforbidden\b/, '/guides/403-forbidden/'],
-    [/^429$|too many requests|rate limit/, '/guides/429-too-many-requests/'],
-    [/^500$|internal server/, '/guides/500-internal-server-error/'],
-    [/^502$|bad gateway/, '/guides/502-bad-gateway/'],
-    [/^503$|service unavailable/, '/guides/503-service-unavailable/'],
-    [/^504$|gateway timeout|timed out gateway/, '/guides/504-gateway-timeout/'],
-    [/cloudflare\s*520|\b520\b.*cloudflare/, '/guides/cloudflare-520/'],
-    [/cloudflare\s*522|\b522\b.*cloudflare|connection timed out cloudflare/, '/guides/cloudflare-522/'],
-    [/cloudflare\s*524|\b524\b.*cloudflare/, '/guides/cloudflare-524/'],
-    [/nginx\s*499|\b499\b.*nginx|client closed request/, '/guides/nginx-499/'],
-    [/nginx\s*444|\b444\b.*nginx|no response nginx/, '/guides/nginx-444/'],
-    [/err_connection_refused|connection refused|net::err_connection_refused/, '/guides/net-err-connection-refused/'],
-    [/err_cert_common_name_invalid|common name invalid|certificate name mismatch/, '/guides/net-err-cert-common-name-invalid/'],
-    [/err_name_not_resolved|name not resolved|dns.*not resolved|could not resolve host/, '/guides/net-err-name-not-resolved/'],
-    [/ssl handshake failed|tls handshake failed|handshake failure/, '/guides/ssl-handshake-failed/']
-  ];
+  const STATIC_SYMPTOMS = {
+    timeout: ['504', '522', '524', '408'],
+    refused: ['ERR_CONNECTION_REFUSED', '502'],
+    'not found': ['404', '410'],
+    auth: ['401', '403'],
+    'too many': ['429'],
+    redirect: ['301', '302', '307', '308'],
+    forbidden: ['403'],
+    crashed: ['500', '502', '503']
+  };
 
-  const norm = (v) => String(v || '').toLowerCase().replace(/[_-]+/g, ' ').trim();
-  const routeFromTerm = (term) => {
-    for (const [pattern, route] of quickRoutes) {
-      if (pattern.test(term)) return route;
+  function normalize(value) {
+    let out = String(value || '').toLowerCase().trim();
+    out = out.replace(/[’']/g, '').replace(/[_-]+/g, ' ');
+    Object.entries(TYPO_FIXES).forEach(([bad, good]) => {
+      out = out.replace(new RegExp(`\\b${bad}\\b`, 'g'), good);
+    });
+    return out.replace(/\s+/g, ' ');
+  }
+
+  function levenshtein(a, b) {
+    if (a === b) return 0;
+    if (!a.length) return b.length;
+    if (!b.length) return a.length;
+    const matrix = Array.from({ length: b.length + 1 }, (_, i) => [i]);
+    for (let j = 0; j <= a.length; j += 1) matrix[0][j] = j;
+    for (let i = 1; i <= b.length; i += 1) {
+      for (let j = 1; j <= a.length; j += 1) {
+        const cost = b.charAt(i - 1) === a.charAt(j - 1) ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j - 1] + cost
+        );
+      }
     }
-    return null;
-  };
+    return matrix[b.length][a.length];
+  }
 
-  let results = [];
-  let active = -1;
+  function buildModal() {
+    if (document.getElementById('search-modal')) return;
+    const modal = document.createElement('div');
+    modal.id = 'search-modal';
+    modal.className = 'search-modal';
+    modal.setAttribute('hidden', 'hidden');
+    modal.innerHTML = `
+      <div class="search-modal__backdrop" data-close-search="true"></div>
+      <div class="search-modal__panel" role="dialog" aria-modal="true" aria-label="Search error guides">
+        <div class="search-modal__top">
+          <input id="lookup-input" type="search" placeholder="Search errors, symptoms, platforms..." autocomplete="off" />
+          <button type="button" class="btn-ghost" id="search-close" aria-label="Close search">Esc</button>
+        </div>
+        <div class="search-modal__meta">
+          <span id="search-context-label" class="muted"></span>
+          <button type="button" id="clear-recent-searches" class="link-btn" hidden>Clear recent</button>
+        </div>
+        <div id="search-did-you-mean" class="muted" hidden></div>
+        <ul id="search-suggestions" class="suggestions" role="listbox" aria-label="Search suggestions"></ul>
+      </div>`;
+    document.body.appendChild(modal);
+  }
 
-  const scoreResult = (item, term) => {
-    let s = 0;
-    if (String(item.code) === term) s += 220;
-    const haystack = [item.code, item.title, item.phrase, item.category, item.class, ...(item.aliases || []), ...(item.keywords || [])].join(' ').toLowerCase();
-    if (haystack.includes(term)) s += 40;
-    if (term.length > 2 && haystack.split(' ').some((token) => token.startsWith(term))) s += 15;
-    return s;
-  };
+  function ensureTriggers() {
+    document.querySelectorAll('.header-actions').forEach((actions) => {
+      if (actions.querySelector('[data-search-open]')) return;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'btn-ghost search-trigger';
+      button.dataset.searchOpen = 'header';
+      button.textContent = 'Search errors... Ctrl+K';
+      actions.prepend(button);
+    });
 
-  const render = () => {
-    list.innerHTML = results.map((r, i) => `<li role="option" aria-selected="${i === active}" data-url="${r.url}"><strong>${r.label}</strong> <span class="muted">${r.hint}</span></li>`).join('');
-  };
+    const heroForm = document.getElementById('lookup-search');
+    if (heroForm && !heroForm.dataset.unifiedSearch) {
+      heroForm.dataset.unifiedSearch = 'true';
+      heroForm.innerHTML = `<label for="hero-search-trigger">Search error guides</label>
+      <button id="hero-search-trigger" class="hero-search-trigger" type="button" data-search-open="hero">Try: 404, cloudflare 522, nginx 499, connection refused</button>
+      <p id="search-help" class="muted">Press / or Ctrl+K to open search.</p>`;
+    }
+  }
 
-  input.addEventListener('input', () => {
-    const term = norm(input.value);
-    if (!term) { results = []; list.innerHTML = ''; return; }
+  function getRecent() {
+    try { return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]'); } catch { return []; }
+  }
 
-    const quick = routeFromTerm(term);
-    results = quick ? [{ label: 'Direct guide', hint: quick, url: quick }] : [];
+  function saveRecent(query, result) {
+    if (!query || !result) return;
+    const next = [{ query, label: result.label, url: result.url }, ...getRecent().filter((r) => r.query !== query)].slice(0, 5);
+    localStorage.setItem(RECENT_KEY, JSON.stringify(next));
+  }
 
-    const topCodes = codes.map((c) => ({ ...c, _score: scoreResult(c, term) }))
-      .filter((c) => c._score > 0)
-      .sort((a, b) => b._score - a._score)
-      .slice(0, 6)
-      .map((c) => ({ label: `${c.code} ${c.phrase}`, hint: 'HTTP guide', url: c.pathGuide || c.pathStatus }));
+  function clearRecent() { localStorage.removeItem(RECENT_KEY); }
 
-    results = [...results, ...topCodes];
-    active = -1;
-    render();
-  });
+  function init() {
+    if (window.__errorLookupSearchInited) return;
+    window.__errorLookupSearchInited = true;
 
-  input.addEventListener('keydown', (e) => {
-    if (!results.length) return;
-    if (e.key === 'ArrowDown') { e.preventDefault(); active = (active + 1) % results.length; render(); }
-    if (e.key === 'ArrowUp') { e.preventDefault(); active = (active - 1 + results.length) % results.length; render(); }
-    if (e.key === 'Enter') { e.preventDefault(); location.href = (results[active] || results[0]).url; }
-  });
+    buildModal();
+    ensureTriggers();
 
-  list.addEventListener('click', (e) => {
-    const li = e.target.closest('li[data-url]');
-    if (li) location.href = li.dataset.url;
-  });
+    const modal = document.getElementById('search-modal');
+    const input = document.getElementById('lookup-input');
+    const list = document.getElementById('search-suggestions');
+    const didYouMean = document.getElementById('search-did-you-mean');
+    const contextLabel = document.getElementById('search-context-label');
+    const clearRecentBtn = document.getElementById('clear-recent-searches');
 
-  form.addEventListener('submit', (e) => {
-    const term = norm(input.value);
-    const quick = routeFromTerm(term);
-    if (quick) { e.preventDefault(); location.href = quick; }
-  });
-}
+    let entries = [];
+    let vocabulary = [];
+    let results = [];
+    let active = -1;
 
-document.addEventListener('DOMContentLoaded', initSearch);
+    function closeModal() {
+      modal.setAttribute('hidden', 'hidden');
+      input.value = '';
+      results = [];
+      list.innerHTML = '';
+      didYouMean.hidden = true;
+    }
+
+    function openModal() {
+      modal.removeAttribute('hidden');
+      input.focus();
+      renderForTerm('');
+    }
+
+    function renderGrouped() {
+      const grouped = new Map();
+      results.forEach((r) => {
+        if (!grouped.has(r.group)) grouped.set(r.group, []);
+        grouped.get(r.group).push(r);
+      });
+      let idx = 0;
+      list.innerHTML = [...grouped.entries()].map(([group, groupItems]) => {
+        const body = groupItems.map((r) => {
+          const row = `<li role="option" aria-selected="${idx === active}" data-index="${idx}" data-url="${r.url}"><strong>${r.label}</strong> <span class="muted">${r.hint || r.group}</span></li>`;
+          idx += 1;
+          return row;
+        }).join('');
+        return `<li class="search-group">${group}</li>${body}`;
+      }).join('');
+    }
+
+    function fuzzySuggestion(term) {
+      if (!term || term.length < 4) return '';
+      let best = null;
+      vocabulary.forEach((word) => {
+        const dist = levenshtein(term, word);
+        if (dist <= 2 && (!best || dist < best.dist)) best = { word, dist };
+      });
+      return best ? best.word : '';
+    }
+
+    function score(entry, term, tokens, symptomHits) {
+      let s = 0;
+      const bag = `${entry.label} ${entry.searchText}`;
+      if (entry.code && entry.code === term) s += 260;
+      if (entry.code && /^\d+$/.test(term) && entry.code.startsWith(term)) s += 120;
+      if (bag.includes(term)) s += 35;
+      tokens.forEach((token) => {
+        if (bag.includes(token)) s += 14;
+      });
+      symptomHits.forEach((hit) => {
+        if ((entry.code && entry.code === hit) || entry.label.toLowerCase().includes(hit.toLowerCase())) s += 95;
+      });
+      return s;
+    }
+
+    function renderForTerm(rawTerm) {
+      const term = normalize(rawTerm);
+      active = -1;
+      if (!term) {
+        const recent = getRecent();
+        contextLabel.textContent = recent.length ? 'Recent' : 'Start typing to find an error guide';
+        clearRecentBtn.hidden = !recent.length;
+        results = recent.map((r) => ({ ...r, group: 'Recent', hint: 'recent search' }));
+        renderGrouped();
+        return;
+      }
+
+      const symptomHits = Object.entries(STATIC_SYMPTOMS)
+        .filter(([k]) => term.includes(k))
+        .flatMap(([, ids]) => ids);
+
+      const tokens = term.split(' ').filter(Boolean);
+      results = entries
+        .map((entry) => ({ ...entry, _score: score(entry, term, tokens, symptomHits) }))
+        .filter((entry) => entry._score > 0)
+        .sort((a, b) => b._score - a._score)
+        .slice(0, 12);
+
+      contextLabel.textContent = `${results.length} results`;
+      clearRecentBtn.hidden = true;
+      renderGrouped();
+
+      const fuzzy = fuzzySuggestion(term);
+      if (fuzzy && fuzzy !== term) {
+        didYouMean.hidden = false;
+        didYouMean.innerHTML = `Did you mean <button class="link-btn" type="button" id="did-you-mean-btn">${fuzzy}</button>?`;
+        const btn = document.getElementById('did-you-mean-btn');
+        if (btn) btn.onclick = () => { input.value = fuzzy; renderForTerm(fuzzy); };
+      } else {
+        didYouMean.hidden = true;
+      }
+    }
+
+    function goToResult(result) {
+      if (!result) return;
+      saveRecent(normalize(input.value), result);
+      location.href = result.url;
+    }
+
+    Promise.all([
+      fetch(CODES_PATH).then((r) => r.json()).catch(() => ({ codes: [] })),
+      fetch(SEARCH_INDEX_PATH).then((r) => r.json()).catch(() => ({ entries: [] }))
+    ]).then(([codesData, searchData]) => {
+      const codeEntries = (codesData.codes || []).map((c) => ({
+        label: `${c.code} ${c.phrase}`,
+        code: String(c.code),
+        url: c.pathGuide || c.pathStatus,
+        hint: c.title,
+        group: c.category === '4xx' ? 'HTTP 4xx' : c.category === '5xx' ? 'HTTP 5xx' : `HTTP ${c.category}`,
+        searchText: normalize([c.title, c.phrase, c.category, c.class, ...(c.aliases || []), ...(c.keywords || [])].join(' '))
+      }));
+      entries = [...(searchData.entries || []), ...codeEntries]
+        .filter((v, i, arr) => arr.findIndex((x) => x.url === v.url) === i);
+      vocabulary = [...new Set(entries.flatMap((e) => normalize(`${e.label} ${e.searchText}`).split(/\s+/).filter((w) => w.length > 3)))];
+    });
+
+    document.addEventListener('click', (e) => {
+      const opener = e.target.closest('[data-search-open]');
+      if (opener) {
+        e.preventDefault();
+        openModal();
+      }
+      if (e.target.closest('[data-close-search]') || e.target.id === 'search-close') closeModal();
+      if (e.target.id === 'clear-recent-searches') {
+        clearRecent();
+        renderForTerm('');
+      }
+
+      const li = e.target.closest('li[data-index]');
+      if (li) goToResult(results[Number(li.dataset.index)]);
+    });
+
+    input.addEventListener('input', () => renderForTerm(input.value));
+
+    input.addEventListener('keydown', (e) => {
+      const selectable = results.length;
+      if (e.key === 'Escape') { e.preventDefault(); closeModal(); return; }
+      if (e.key === 'ArrowDown' && selectable) { e.preventDefault(); active = (active + 1) % selectable; renderGrouped(); }
+      if (e.key === 'ArrowUp' && selectable) { e.preventDefault(); active = (active - 1 + selectable) % selectable; renderGrouped(); }
+      if (e.key === 'Enter' && selectable) { e.preventDefault(); goToResult(results[active >= 0 ? active : 0]); }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const isTyping = ['INPUT', 'TEXTAREA'].includes((e.target && e.target.tagName) || '') || e.target?.isContentEditable;
+      const slash = e.key === '/';
+      const command = (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k';
+      if (command || (slash && !isTyping)) {
+        e.preventDefault();
+        openModal();
+      } else if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
+        closeModal();
+      }
+    });
+  }
+
+  window.ErrorLookupSearch = { init };
+})();
