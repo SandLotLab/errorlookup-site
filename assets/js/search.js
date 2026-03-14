@@ -80,7 +80,7 @@
       button.type = 'button';
       button.className = 'btn-ghost search-trigger';
       button.dataset.searchOpen = 'header';
-      button.textContent = 'Search errors... Ctrl+K';
+      button.textContent = 'Ctrl/Cmd + K';
       actions.prepend(button);
     });
 
